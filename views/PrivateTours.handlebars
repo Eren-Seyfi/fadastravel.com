@@ -1,0 +1,291 @@
+<div class="space-y-10 flex flex-col items-center justify-center">
+  <img
+    src="img/privatetours/bg.webp"
+    class="hidden md:block w-full h-72 bg-center bg-contain"
+    alt=""
+  />
+  <span class="text-center">
+    <p class="hidden md:block w-[53rem] font-normal font-poppins text-lg">
+      Our Private Tours were carefully designed so that our guests have the best
+      Turkish experience possible. In these tours, we will discover Turkey
+      together and show you what can't be found in guidebooks or online. Our
+      knowledgeable and passionate guides will immerse you in the history and
+      culture of Turkey. So, come join us on this journey and let's create some
+      unforgettable memories!
+    </p>
+
+  </span>
+
+  {{! Our Private Tours }}
+  <h1
+    class="text-center font-bold text-3xl md:text-5xl pt-8 w-full"
+    data-aos="fade-right"
+  >
+    Our Private Tours
+  </h1>
+
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center px-2 md:px-16 gap-4 w-full"
+  >
+    {{#each ToursCard}}
+      <a
+        href="{{this.Link}}"
+        class="flex flex-col mt-6 text-gray-700 bg-white shadow-md rounded-xl w-auto max-w-80 h-[23rem] hover:scale-105 transition-all"
+      >
+        <div class="overflow-hidden shadow-lg rounded-none">
+          <img src="{{this.Image}}" alt="{{this.Headers}}" />
+        </div>
+
+        <div class="flex flex-col justify-between flex-1 px-6 py-4 space-y-10">
+          <div>
+            <h6 class="font-medium text-gray-500 text-sm">Private Tours</h6>
+            <h5
+              class="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900"
+            >{{this.Headers}}</h5>
+            <p
+              class="block font-sans text-base antialiased font-light leading-relaxed text-inherit truncate"
+            >{{this.Description}}</p>
+          </div>
+
+          <div class="text-end mt-4">
+            <span>From </span>
+            <span
+              class="text-black font-bold text-xl"
+            >{{this.Currency}}{{this.Price}}</span>
+          </div>
+        </div>
+      </a>
+    {{/each}}
+  </section>
+  {{! -------------------- }}
+
+  {{! Reviews }}
+  <section
+    class="w-full min-h-screen py-10 md:min-h-[45rem] bg-[#04A9DE] flex flex-col justify-center items-center"
+  >
+    <p class="mb-4 text-3xl md:text-4xl lg:text-5xl text-white">Reviews</p>
+    <div class="owl-carousel owl-theme container h-auto w-full reviews">
+      {{#each GlobalReviews}}
+        <div class="item h-auto w-full">
+          <div
+            class="h-auto w-full flex items-center justify-center bg-[#04A9DE]"
+          >
+            <div class="w-3/4 text-center space-y-10">
+              <div class="flex flex-col items-center justify-center space-y-10">
+                <div class="w-36 h-36">
+                  <img src="{{this.img}}" alt="" />
+                </div>
+              </div>
+              <p
+                class="mb-12 opacity-80 font-medium font-poppins italic text-white text-lg"
+              >{{this.content}}</p>
+              <p class="font-bold italic text-white">{{this.footer}}</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+
+  {{! -------------------- }}
+
+  {{! Why Turkey? }}
+  <section
+    class="flex-row-reverse font-poppins container flex justify-center items-center lg:flex-nowrap flex-wrap gap-10 px-6 my-10"
+  >
+    <img
+      src="img/privatetours/1.webp"
+      class="block md:hidden rounded-3xl w-full md:h-96 bg-contain bg-center"
+      alt=""
+      data-aos="fade-left"
+    />
+    <div class="space-y-4">
+      <h1
+        clas
+        class="font-semibold text-2xl md:text-3xl text-center md:text-start"
+        data-aos="fade-left"
+      >
+        Why Turkey?
+      </h1>
+      <p
+        class="font-normal tracking-widest font-poppins text-black text-lg text-justify w-full md:w-[42rem]"
+        data-aos="fade-up"
+      >
+        Turkey is surrounded by three different seas, with history and culture
+        that are simply unmatched. It is the origin of civilization, with lands
+        that hundreds of emperors and sultans have walked. It is where the past
+        meets the present – from the 1000-year-old bazaars to the modern cities,
+        from the hot air balloons in Cappadocia to the historic mosques of
+        Istanbul. It is a country that we are proud to call home. At Fadas
+        Travel, our goal is to help you uncover these wonders, and provide the
+        most beautiful Turkish experience possible.
+      </p>
+    </div>
+    <img
+      src="img/privatetours/1.webp"
+      class="hidden md:block rounded-3xl h-auto md:h-96 bg-contain bg-center"
+      alt=""
+      data-aos="fade-left"
+    />
+  </section>
+
+  {{! -------------------- }}
+
+  {{! YouTube Video Player and Accordion Menü }}
+  <section class="px-2 md:px-0 lg:w-[70rem]">
+
+    <div class="relative mb-3">
+      <h6 class="mb-0">
+        <button
+          class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
+          data-collapse-target="animated-collapse-1"
+        >
+          <span>What is Material Tailwind?</span>
+          <i
+            class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
+          ></i>
+        </button>
+      </h6>
+      <div
+        data-collapse="animated-collapse-1"
+        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+          We're not always in the position that we want to be at. We're
+          constantly growing. We're constantly making mistakes. We're constantly
+          trying to express ourselves and actualize our dreams.
+        </div>
+      </div>
+    </div>
+
+    <div class="relative mb-3">
+      <h6 class="mb-0">
+        <button
+          class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
+          data-collapse-target="animated-collapse-2"
+        >
+          <span>How to use Material Tailwind?</span>
+          <i
+            class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
+          ></i>
+        </button>
+      </h6>
+      <div
+        data-collapse="animated-collapse-2"
+        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+          We're not always in the position that we want to be at. We're
+          constantly growing. We're constantly making mistakes. We're constantly
+          trying to express ourselves and actualize our dreams.
+        </div>
+      </div>
+    </div>
+
+    <div class="relative mb-3">
+      <h6 class="mb-0">
+        <button
+          class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
+          data-collapse-target="animated-collapse-3"
+        >
+          <span>What can I do with Material Tailwind?</span>
+          <i
+            class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
+          ></i>
+        </button>
+      </h6>
+      <div
+        data-collapse="animated-collapse-3"
+        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+          We're not always in the position that we want to be at. We're
+          constantly growing. We're constantly making mistakes. We're constantly
+          trying to express ourselves and actualize our dreams.
+        </div>
+      </div>
+    </div>
+
+    <section class="flex justify-center items-center container">
+      <iframe
+        src="https://www.youtube.com/embed/6texDFhF_co"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        class="w-full h-[30vh] md:h-[70vh]"
+      ></iframe>
+    </section>
+  </section>
+  {{! -------------------- }}
+
+  {{! Explore Turkey with us }}
+
+  <section
+    class="w-full py-24 bg-[#F9F3EE] flex flex-col justify-center items-center gap-10"
+  >
+    <h1 class="font-poppins text-5xl text-center" data-aos="fade-right">
+      Explore Turkey with us
+    </h1>
+    <a
+      href="/Private-Tours"
+      class="bg-red-400 hover:bg-blue-gray-400 transition text-white rounded-full py-4 px-9 font-bold"
+      data-aos="fade-up"
+    >
+      View Tours
+    </a>
+  </section>
+
+  {{! -------------------- }}
+
+  {{! Subscribe to Our Newsletter }}
+
+  <section
+    class="w-full h-auto flex flex-col justify-center items-center gap-10 py-10"
+    data-aos="zoom-in-down"
+  >
+    <h1 class="text-center font-poppins text-[#0791BE] font-medium text-4xl">
+      Subscribe to Our Newsletter
+    </h1>
+    <form
+      action="/Subscribe-To-Our-Newsletter"
+      method="post"
+      class="flex flex-col justify-center items-center gap-8"
+    >
+      <div class="relative h-11 w-full min-w-[300px] md:min-w-[32vw]">
+        <input
+          type="text"
+          name="name"
+          placeholder="First Name"
+          class="peer h-auto w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
+        />
+        <label
+          class="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-auto w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-900 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+        >
+          First Name
+        </label>
+      </div>
+      <div class="relative h-11 w-full min-w-[300px] md:min-w-[32vw]">
+        <input
+          placeholder="Email"
+          name="email"
+          class="peer h-auto w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
+        />
+        <label
+          class="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-auto w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-900 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+        >
+          Email
+        </label>
+      </div>
+      <button
+        type="submit"
+        class="bg-[#0791BE] hover:bg-blue-600 transition rounded w-full text-white font-semibold text-xl py-1.5"
+      >
+        Subscribe
+      </button>
+    </form>
+  </section>
+
+  {{! -------------------- }}
+
+</div>

@@ -1,0 +1,468 @@
+<section class="space-y-20 w-full h-auto">
+  <div class="owl-carousel tours owl-theme">
+    {{#each carousel}}
+      <div class="item">
+        <img
+          src="{{this}}"
+          alt="{{this}}"
+          class="rounded-3xl border-none border-0 md:h-96 h-[32rem] w-full"
+        />
+      </div>
+    {{/each}}
+  </div>
+
+  <div
+    class="container grid grid-cols-1 md:grid-cols-3 place-items-start place-content-center w-full h-auto"
+  >
+    {{! Tur içerik }}
+    <div
+      class="col-span-2 flex flex-col items-center justify-between container shadow-lg rounded-3xl w-full h-auto pt-10"
+    >
+      {{! Tur Name  }}
+
+      <div class="space-y-4">
+        <h1 class="text-3xl p-4 font-bold">{{content.Headers}}</h1>
+        <p class="p-4 text-justify font-normal">{{content.Content}}</p>
+        {{! Itinerary  }}
+        <div
+          class="bg-[#4792BE] w-36 h-12 flex items-center justify-center gap-3 rounded-r-2xl"
+        >
+
+          <i class="fa-solid fa-place-of-worship text-xl text-white"></i>
+          <span class="text-white font-normal">Itinerary</span>
+        </div>
+        {{! ============================ Accordion Menü   ============================}}
+
+        <div class="accordion-container">
+          {{#each accordion}}
+            <div class="ac border-none border-0">
+
+              <h2 class="ac-header h-12 border-none border-0">
+                <button
+                  type="button"
+                  class="ac-trigger h-full"
+                >{{this.title}}</button>
+              </h2>
+
+              <div
+                class="ac-panel px-10 text-justify border-none border-0 space-y-2"
+              >
+
+                <ul class="pl-8 list-disc space-y-4 border-none border-0 mt-4">
+                  {{#each this.list}}
+                    <li
+                      class="text-base text-black font-light font-poppins"
+                      key="{index}"
+                    >
+                      {{this}}
+                    </li>{{/each}}
+                </ul>
+
+                <br />
+
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 justify-start items-start gap-y-10 gap-x-2"
+                >
+                  {{! Luxury Accomodations   }}
+                  <div class="w-full space-y-3">
+                    <h1
+                      class="flex items-center gap-2 text-base font-bold text-black"
+                    >
+                      <i class="fa-solid fa-bed"></i>
+                      <span>Luxury Accomodations</span>
+                    </h1>
+                    <ul class="pl-8 list-disc text-base text-black/80">
+                      {{#each this.LuxuryAccomodations}}
+                        <li>
+                          {{this}}
+                        </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+
+                  {{! Included IncludedMeals  }}
+                  <div class="w-full space-y-3">
+                    <h1
+                      class="flex items-center gap-2 text-base font-bold text-black"
+                    >
+                      <FaUtensils />
+                      <span>Included Meals</span>
+                    </h1>
+                    <ul class="pl-8 list-disc text-base text-black/80">
+                      {{#each this.IncludedMeals}}
+                        <li>
+                          {{this}}
+                        </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  {{! Included Activity  }}
+                  <div class="w-full space-y-3">
+                    <h1
+                      class="flex items-center gap-2 text-base font-bold text-black"
+                    >
+                      <i class="fa-solid fa-motorcycle"></i>
+                      <span>Included Activity</span>
+                    </h1>
+                    <ul class="pl-8 list-disc text-base text-black/80">
+                      {{#each this.IncludedActivity}}
+                        <li>
+                          {{this}}
+                        </li>
+                      {{/each}}
+
+                    </ul>
+                  </div>
+                  {{! Add On AddOnActivities  }}
+                  <div class="w-full space-y-3">
+                    <h1
+                      class="flex items-center gap-2 text-base font-bold text-black"
+                    >
+
+                      <i
+                        class="fa-solid fa-plus text-black/50 text-lg font-body"
+                      ></i>
+                      <span>Add On Activities</span>
+                    </h1>
+                    <ul class="pl-8 list-disc text-base text-black/80">
+
+                      {{#each this.AddOnActivities}}
+                        <li>
+                          {{this}}
+                        </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          {{/each}}
+
+        </div>
+
+        {{! ============================ Content ============================  }}
+        {{! Inclusions  }}
+
+        <div
+          class="bg-[#4792BE] w-36 h-12 flex items-center justify-center gap-3 rounded-r-2xl"
+        >
+
+          <i class="fa-solid fa-clipboard-list text-xl text-white"></i>
+          <span class="text-white font-normal">Inclusions</span>
+        </div>
+
+        <div class="px-1 space-y-1.5">
+          {{! Luxury Accomodations  }}
+          <div class="rounded-2xl bg-[#FAF4E4] px-4 py-8 space-y-3">
+            <h1 class="flex items-center gap-2">
+              <FaBed class="text-xl" />
+              <span class="text-lg">Luxury Accomodations</span>
+            </h1>
+            <ul class="pl-8 list-disc">
+
+              {{#each LuxuryAccomodations}}
+                <li class="font-light text-sm">
+                  {{this}}
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+
+          {{! Transportation  }}
+          <div class="rounded-2xl bg-[#FAF4E4] px-4 py-8 space-y-3">
+            <h1 class="flex items-center gap-2">
+              <FaCar class="text-xl" />
+              <span class="text-lg">Transportation</span>
+            </h1>
+            <ul class="pl-8 list-disc">
+              {{#each Transportation}}
+                <li class="font-light text-sm">
+                  {{this}}
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+
+          {{! Activities  }}
+          <div class="rounded-2xl bg-[#FAF4E4] px-4 py-8 space-y-3">
+            <h1 class="flex items-center gap-2">
+              <FaMotorcycle class="text-xl" />
+              <span class="text-lg">Activities</span>
+            </h1>
+            <ul class="pl-8 list-disc">
+              {{#each Activities}}
+                <li class="font-light text-sm">
+                  {{this}}
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+
+          {{! Meals  }}
+          <div class="rounded-2xl bg-[#FAF4E4] px-4 py-8 space-y-3">
+            <h1 class="flex items-center gap-2">
+              <FaUtensils class="text-xl" />
+              <span class="text-lg">Meals</span>
+            </h1>
+            <ul class="pl-8 list-disc">
+              {{#each Meals}}
+                <li class="font-light text-sm">
+                  {{this}}
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+
+          {{! Add On Activities  }}
+          <div class="rounded-2xl bg-[#FAF4E4] px-4 pt-8 space-y-3">
+            <h1 class="flex items-center gap-2">
+              <FaPlus class="text-xl" />
+              <span class="text-lg">Add On Activities</span>
+            </h1>
+
+            {{#each AddOnActivities}}
+              {{#each this as |activity|}}
+                <h1>{{activity.Head}}</h1>
+                <ul class="pl-8 list-disc">
+                  {{#each activity}}
+                    <li class="font-light text-sm">{{this}}</li>
+                  {{/each}}
+                </ul>
+              {{/each}}
+            {{/each}}
+
+          </div>
+        </div>
+      </div>
+    </div>
+    {{! Tur form }}
+    <div class="flex flex-col items-center w-full ml-0 md:ml-10">
+      <div
+        class="flex flex-col justify-center items-center h-full w-full gap-10"
+      >
+        <img class="rounded-3xl w-96" src="{{form.Map}}" alt="" />
+        <form
+          action="/{{form.Headers}}"
+          method="POST"
+          class="flex flex-col justify-center items-center md:items-start h-full w-full gap-10 px-4 md:px-0"
+        >
+          <h1
+            class="flex items-center justify-center bg-[#4792BE] w-full rounded-t-3xl h-20 text-white text-xl font-bold"
+          >
+            Summary & Booking
+          </h1>
+          <span class="font-bold pl-2">{{form.Headers}}</span>
+          <div class="flex items-end gap-1">
+            <span
+              class="flex items-start space-x-2 font-poppins font-medium text-black/80"
+            >
+              <span class="text-2xl"> {{form.currency}}</span>
+              <h1 class="font-bold text-5xl"> {{form.Price}}</h1>
+            </span>
+            <span class="text-4xl font-bold">/</span>
+            <h2 class="font-medium text-4xl font-poppins h-7">person</h2>
+          </div>
+          <div class="flex items-center gap-2">
+            <span>(5.0 Reviews)</span>
+            <div class="flex items-center gap-0.5">
+              <i class="fa-solid fa-star text-[#EFAD4E]"></i>
+              <i class="fa-solid fa-star text-[#EFAD4E]"></i>
+              <i class="fa-solid fa-star text-[#EFAD4E]"></i>
+              <i class="fa-solid fa-star text-[#EFAD4E]"></i>
+              <i class="fa-solid fa-star text-[#EFAD4E]"></i>
+            </div>
+          </div>
+          <span class="w-full h-0.5 bg-black"></span>
+          <div
+            class="flex flex-col items-center justify-center h-full w-full gap-4"
+          >
+            <div class="relative w-full min-w-[200px] h-10">
+              <input
+                class="peer w-full h-full bg-transparent text-blue-gray-500 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
+                placeholder=""
+                name="FirstName"
+              /><label
+                class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
+              >First Name
+              </label>
+            </div>
+
+            <div class="relative w-full min-w-[200px] h-10">
+              <input
+                class="peer w-full h-full bg-transparent text-blue-gray-500 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
+                placeholder=""
+                name="LastName"
+              /><label
+                class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
+              >Last Name
+              </label>
+            </div>
+
+            <div class="relative w-full min-w-[200px] h-10">
+              <input
+                class="peer w-full h-full bg-transparent text-blue-gray-500 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
+                placeholder=""
+                type="number"
+                name="NumberOfAdults"
+              /><label
+                class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
+              >Number of Adults
+              </label>
+            </div>
+
+            <div class="relative w-full min-w-[200px] h-10">
+              <input
+                class="peer w-full h-full bg-transparent text-blue-gray-500 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
+                placeholder=""
+                type="number"
+                name="NumberofInfant"
+              /><label
+                class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
+              >Number of Infant (0-2 years)
+              </label>
+            </div>
+
+            <div class="relative w-full min-w-[200px] h-10">
+              <input
+                class="peer w-full h-full bg-transparent text-blue-gray-500 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
+                placeholder=""
+                type="number"
+                name="NumberOfKids"
+              /><label
+                class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
+              >Number of Kids (2-12 years)
+              </label>
+            </div>
+
+            <div class="relative w-full min-w-[200px] h-10">
+              <input
+                class="peer w-full h-full bg-transparent text-blue-gray-500 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
+                placeholder=""
+                type="number"
+                name="NumberOfRooms"
+              /><label
+                class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
+              >Number of Rooms
+              </label>
+            </div>
+
+            <div class="w-full min-w-[200px] h-10">
+              <input
+                class="w-full h-full text-blue-gray-500 font-sans font-normal border text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200"
+                placeholder=""
+                type="tel"
+                id="phone"
+                name="telefon"
+              />
+            </div>
+
+            <div class="relative w-full min-w-[200px] h-10">
+              <input
+                class="peer w-full h-full bg-transparent text-blue-gray-500 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
+                placeholder=""
+                type="text"
+                name="EmailAddress"
+              /><label
+                class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
+              >Email Address
+              </label>
+            </div>
+
+            <div class="relative h-10 w-full min-w-[200px]">
+              <input
+                id="date-picker"
+                class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                placeholder=""
+                name="Date"
+              />
+              <label
+                class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+              >
+                Select a Date
+              </label>
+            </div>
+
+          </div>
+          <button
+            class="w-full select-none rounded-full bg-[#F44336] py-4 px-6 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-red-500/20 transition-all hover:shadow-lg hover:shadow-red-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            type="submit"
+          >
+            REQUEST TOUR
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+  <section
+    class="w-full min-h-screen py-10 md:min-h-[45rem] bg-[#04A9DE] flex flex-col justify-center items-center"
+  >
+    <p class="mb-4 text-3xl md:text-4xl lg:text-5xl text-white">Reviews</p>
+    <div class="owl-carousel owl-theme container h-auto w-full reviews">
+      {{#each Reviews}}
+        <div class="item h-auto w-full">
+          <div
+            class="h-auto w-full flex items-center justify-center bg-[#04A9DE]"
+          >
+            <div class="w-3/4 text-center space-y-10">
+              <p
+                class="mb-12 opacity-80 font-medium font-poppins italic text-white"
+              >{{this.content}}</p>
+              <p class="font-bold italic text-white">{{this.footer}}</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+
+  {{! Our Private Tours }}
+  <h1
+    class="text-center font-bold text-3xl md:text-5xl pt-8 w-full"
+    data-aos="fade-right"
+  >
+    Our Private Tours
+  </h1>
+
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center px-2 md:px-16 gap-4 w-full"
+  >
+    {{#each ToursCard}}
+      <a
+        href="{{this.Link}}"
+        class="flex flex-col mt-6 text-gray-700 bg-white shadow-md rounded-xl w-auto max-w-80 h-[23rem] hover:scale-105 transition-all"
+      >
+        <div class="overflow-hidden shadow-lg rounded-none">
+          <img src="{{this.Image}}" alt="{{this.Headers}}" />
+        </div>
+
+        <div class="flex flex-col justify-between flex-1 px-6 py-4 space-y-10">
+          <div>
+            <h6 class="font-medium text-gray-500 text-sm">Private Tours</h6>
+            <h5
+              class="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900"
+            >{{this.Headers}}</h5>
+            <p
+              class="block font-sans text-base antialiased font-light leading-relaxed text-inherit truncate"
+            >{{this.Description}}</p>
+          </div>
+
+          <div class="text-end mt-4">
+            <span>From </span>
+            <span
+              class="text-black font-bold text-xl"
+            >{{this.Currency}}{{this.Price}}</span>
+          </div>
+        </div>
+      </a>
+    {{/each}}
+  </section>
+  {{! -------------------- }}
+  <br />
+  <br />
+
+</section>

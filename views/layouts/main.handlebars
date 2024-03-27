@@ -1,0 +1,211 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fadastravel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    {{!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@20.1.0/build/css/intlTelInput.css">
+  
+  <link rel="stylesheet" href="css/accordion.css">
+  </head>
+  <body class="w-auto h-full flex flex-col justify-between">
+
+    <nav class="py-2 pt-0 md:pt-4 space-y-16 container w-full">
+      {{! üst navbar }}
+      <div class="hidden lg:flex items-center justify-between">
+        {{! İletişim bilgileri  }}
+        <div class="flex gap-5 items-center flex-wrap">
+          <a
+            class="flex gap-2 items-center"
+            target="_blank"
+            href="tel:+905382162785"
+          >
+            <i class="fa-solid fa-phone"></i>
+            <span class="text-xs font-poppins">+90 538 216 2785</span>
+          </a>
+          <a
+            class="flex gap-2 items-center"
+            target="_blank"
+            href="mailto:info@fadastravel.com"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            <span class="text-xs font-poppins">info@fadastravel.com</span>
+          </a>
+          <a
+            class="flex gap-2 items-center"
+            target="_blank"
+            href="https://maps.app.goo.gl/WN3uSwyaWeAnLozp7"
+          >
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="text-xs font-poppins">
+              Yukarı Mahalle, Fatih Caddesi, No:11 BC Uçhisar/Nevşehir/Türkiye
+            </span>
+          </a>
+        </div>
+
+        {{! Sosyalmeda Bilgileri  }}
+        <div class="flex items-center gap-5">
+          <a
+            href="http://wa.me/+905382162785"
+            target="_blank"
+            class="hover:text-red-500 text-gray-600 text-lg"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/fadastravel"
+            target="_blank"
+            class="hover:text-red-500 text-gray-600 text-lg"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCUblskJ-DnRU9qyvye8JS3Q"
+            target="_blank"
+            class="hover:text-red-500 text-gray-600 text-lg"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/fadastravel/"
+            target="_blank"
+            class="hover:text-red-500 text-gray-600 text-lg"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/fadas-travel-health-tourism/"
+            target="_blank"
+            class="hover:text-red-500 text-gray-600 text-lg"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+
+      </div>
+
+      {{! alt navbar }}
+      <div class="flex justify-between items-center px-8 md:px-0">
+
+        <a href="/" class="h-12 md:h-14 ">
+          <img class="h-14" src="img/layouts/navbarlogo.png" alt="Logo" />
+        </a>
+        <!-- Navbar içindeki menü -->
+        <ul class="hidden md:flex space-x-8">
+                {{#each menuItems}}
+                  <li class="{{#if isActive}}text-red-500{{/if}} hover:text-red-500 duration-500   text-sm font-semibold tracking-widest font-poppins">
+                    <a href="{{this.link}}">{{this.title}}</a>
+                  </li>
+                {{/each}}
+          </ul> 
+
+        {{! ------ Mobil Menü   ------ }}
+
+        <button class="md:hidden flex items-center mobil-menu-button">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+
+      </div>
+      
+      <ul class="md:hidden block mobil-menu w-auto hidden px-10 text-end"> <!-- Add 'hidden' class here -->
+          {{#each menuItems}}
+              <li class="{{#if isActive}}text-red-500{{/if}} hover:text-red-500 duration-500 text-gray-600 text-base font-bold tracking-widest font-poppins">
+                <a href="{{this.link}}">{{this.title}}</a>
+              </li>
+          {{/each}}
+      </ul>
+
+    </nav>
+
+{{{body}}}
+
+
+    <footer class="bg-[#383838] py-10 md:px-0 px-4">
+      <div
+        class="container flex items-center md:flex-row flex-col md:gap-0 gap-10"
+      >
+        <div class="w-auto md:w-1/3">
+          <section>
+            <a
+              class="flex items-center justify-center md:justify-start space-x-4 text-white font-semibold text-lg group md:hover:text-red-400"
+              href="tel:+903842141440"
+            >
+
+              <i
+                class="fa-solid fa-phone text-red-400 md:text-white md:group-hover:text-red-400"
+              ></i>
+              <span>+90 538 216 2785</span>
+            </a>
+            <a
+              class="flex items-center justify-center md:justify-start space-x-4 text-white font-semibold  text-lg group md:hover:text-red-400"
+              href="mailto:info@fadastravel.com"
+            >
+
+              <i
+                class="fa-solid fa-envelope text-red-400 md:text-white md:group-hover:text-red-400"
+              ></i>
+              <span>info@fadastravel.com</span>
+            </a>
+            <a
+              class="flex items-center justify-center space-x-4 text-white font-semibold text-lg group md:hover:text-red-400"
+              href="https://maps.app.goo.gl/WN3uSwyaWeAnLozp7"
+            >
+
+              <i
+                class="fa-solid fa-location-dot text-red-400 md:text-white md:group-hover:text-red-400 text-2xl md:text-xl"
+              ></i>
+              <span class="text-center md:text-start m-0 p-0">
+                Yukarı Mahalle, Fatih Caddesi, No:11 BC Uçhisar/Nevşehir/Türkiye
+              </span>
+            </a>
+          </section>
+        </div>
+        {{! Logo }}
+
+        <div class="w-auto md:w-1/3 flex flex-col items-center">
+          <img
+            src="img/layouts/fadas-logo-footer.webp"
+            alt="Fadas Logo"
+            class="h-32"
+          />
+        </div>
+        {{! TURSAB Logo  }}
+        <div class="md:w-1/3 flex flex-col items-center">
+          <img
+            src="img/layouts/tursab-logo-footer.webp"
+            alt="Tursab Logo"
+            class="h-24"
+          />
+
+          <h2 class="font-extrabold text-2xl text-white">
+            MEMBER NO: 13360
+          </h2>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      AOS.init();
+    </script>  
+     <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@20.1.0/build/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/main.js"></script>
+    <script>
+      const input = document.querySelector("#phone");
+      window.intlTelInput(input, {
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@20.1.0/build/js/utils.js",
+        initialCountry: "us",
+        hiddenInput: () => ({ phone: "full_phone", country: "country_code" }),
+      });
+    </script>
+   </body>
+</html>

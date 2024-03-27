@@ -1,0 +1,409 @@
+{{! Video }}
+<div>
+  <video
+    class="w-full h-auto"
+    autoplay="true"
+    muted="true"
+    loop="true"
+    autoplay="true"
+  >
+    <source
+      src="video/Untitleddesign.mp4"
+      type="video/mp4"
+      class="w-full h-auto"
+    />
+  </video>
+</div>
+
+{{! -------------------- }}
+
+{{! We design Turkish memories }}
+<section
+  class="flex-row font-poppins container flex justify-center items-center lg:flex-nowrap flex-wrap gap-10 px-6 my-10"
+>
+  <img
+    src="img/home/WeDesignTurkishMemories.webp"
+    class="block md:hidden rounded-3xl w-full md:h-96 bg-contain bg-center"
+    alt=""
+    data-aos="fade-up"
+  />
+
+  <div class="space-y-4">
+    <h1
+      class="font-semibold text-2xl md:text-3xl text-center md:text-start"
+      data-aos="fade-left"
+    >
+      We design Turkish memories
+    </h1>
+    <p
+      class="font-normal tracking-widest font-poppins text-lg text-justify w-full md:w-[42rem]"
+      data-aos="fade-up"
+    >
+      At Fadas Travel, our values are simple: we create the most comfortable and
+      immersive experiences of Turkey possible. While doing so, we connect width
+      our guests and make sure that no one leaves unhappy. Remember, we are not
+      a corporate company; we are locals of the region and can find the best
+      solutions for anything you need during your trip.
+    </p>
+  </div>
+  <img
+    src="img/home/WeDesignTurkishMemories.webp"
+    class="hidden md:block rounded-3xl h-auto md:h-96 bg-contain bg-center"
+    alt=""
+    data-aos="fade-up"
+  />
+</section>
+{{! -------------------- }}
+{{! Our Private Tours }}
+<h1
+  class="text-center font-bold text-3xl md:text-5xl pt-8 w-full"
+  data-aos="fade-right"
+>
+  Our Private Tours
+</h1>
+
+<section
+  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center md:px-16 gap-4 w-screen"
+>
+  {{#each ToursCard}}
+    <a
+      href="{{this.Link}}"
+      class="flex flex-col mt-6 text-gray-700 bg-white shadow-md rounded-xl w-full max-w-80 h-[23rem] hover:scale-105 transition-all"
+    >
+      <div class="overflow-hidden shadow-lg rounded-none">
+        <img src="{{this.Image}}" alt="{{this.Headers}}" />
+      </div>
+
+      <div class="flex flex-col justify-between flex-1 px-2 py-4 space-y-10">
+        <div>
+          <h6 class="font-medium text-gray-500 text-sm">Private Tours</h6>
+          <h5
+            class="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900"
+          >{{this.Headers}}</h5>
+          <p
+            class="block font-sans text-base antialiased font-light leading-relaxed text-inherit truncate"
+          >{{this.Description}}</p>
+        </div>
+
+        <div class="text-end mt-4">
+          <span>From </span>
+          <span
+            class="text-black font-bold text-xl"
+          >{{this.Currency}}{{this.Price}}</span>
+        </div>
+      </div>
+    </a>
+  {{/each}}
+</section>
+{{! -------------------- }}
+{{! Our Founders }}
+
+<section
+  class="flex-row-reverse font-poppins container flex justify-center items-center lg:flex-nowrap flex-wrap gap-10 px-6 my-10"
+>
+  <img
+    src="img/home/OurFounders.webp"
+    class="block md:hidden rounded-3xl w-full md:h-96 bg-contain bg-center"
+    alt=""
+    data-aos="fade-left"
+  />
+
+  <div class="space-y-4">
+    <h1
+      class="font-bold text-2xl md:text-3xl text-slate-700 text-center md:text-start"
+      data-aos="fade-left"
+    >
+      Our Founders
+    </h1>
+    <p
+      class="font-normal tracking-widest font-poppins text-lg text-justify w-full md:w-[42rem]"
+      data-aos="fade-up"
+    >
+      Fadas Travel was founded by Makbule and Seckin, a couple who have lived
+      all over the world and worked in industries outside of tourism. After
+      restoring their hotel in Cappadocia and starting Fadas Travel, they fell
+      in love with the work. Today, they are living in Turkey and are dedicated
+      to showing people how special their homeland is.
+      <a href="/Who-We-Are" class="text-red-500">
+        Meet our team…
+      </a>
+    </p>
+  </div>
+
+  <img
+    src="img/home/OurFounders.webp"
+    class="hidden md:block rounded-3xl h-auto md:h-96 bg-contain bg-center"
+    alt=""
+    data-aos="fade-left"
+  />
+</section>
+{{! -------------------- }}
+
+{{! Why are we different? }}
+
+<section
+  class="container space-y-10 px-5 md:px-0 mb-10 h-auto w-full"
+  data-aos="fade-right"
+>
+  <h1 class="text-center font-bold text-5xl text-black/80">
+    Why are we different?
+  </h1>
+
+  <div class="flex flex-wrap items-start justify-center w-full h-auto gap-10">
+
+    <section
+      class="flex flex-col justify-center items-center h-auto w-96 gap-4"
+    >
+      <img
+        src="img/home/WhyAreWeDifferent/1.webp"
+        width="400"
+        height="400"
+        class="rounded-3xl h-72"
+        alt=""
+      />
+      <span class="rounded-full bg-blue-500/95 px-7 py-1 text-center">
+        <h1 class="font-bold text-base text-white">People</h1>
+      </span>
+      <span class="text-justify font-light">
+        Our tour guides and partners are not just professionals doing their job;
+        they are people with a love for their country and their craft. You will
+        meet them as a guest and leave as a close friend.
+      </span>
+    </section>
+
+    <section
+      class="flex flex-col justify-center items-center h-auto w-96 gap-4"
+    >
+      <img
+        src="img/home/WhyAreWeDifferent/2.webp"
+        width="400"
+        height="400"
+        class="rounded-3xl h-72"
+        alt=""
+      />
+      <span class="rounded-full bg-blue-500/95 px-7 py-1 text-center">
+        <h1 class="font-bold text-base text-white">Passion</h1>
+      </span>
+      <span class="text-justify font-light">
+        At Fadas Travel, we are committed to not being just another travel
+        company that automates their tours; we want you to feel the unique
+        experience we have designed for you. Our goal is to show you the best
+        version of Turkey possible.
+      </span>
+    </section>
+
+    <section
+      class="flex flex-col justify-center items-center h-auto w-96 gap-4"
+    >
+      <img
+        src="img/home/WhyAreWeDifferent/3.webp"
+        width="400"
+        height="400"
+        class="rounded-3xl h-72"
+        alt=""
+      />
+      <span class="rounded-full bg-blue-500/95 px-7 py-1 text-center">
+        <h1 class="font-bold text-base text-white">Presence</h1>
+      </span>
+      <span class="text-justify font-light">
+        Our Regional Experts will be available 24/7 during your stay to ensure
+        all your needs are met. Also, when you are in the Cappadocia region, our
+        owners will meet you personally and make sure everything is going well.
+      </span>
+    </section>
+
+  </div>
+</section>
+
+{{! -------------------- }}
+
+{{! Reviews }}
+<section
+  class="w-full min-h-screen py-10 md:min-h-[45rem] bg-[#04A9DE] flex flex-col justify-center items-center"
+>
+  <p class="mb-4 text-3xl md:text-4xl lg:text-5xl text-white">Reviews</p>
+  <div class="owl-carousel owl-theme container h-auto w-full reviews">
+    {{#each GlobalReviews}}
+      <div class="item h-auto w-full">
+        <div
+          class="h-auto w-full flex items-center justify-center bg-[#04A9DE]"
+        >
+          <div class="w-3/4 text-center space-y-10">
+            <div class="flex flex-col items-center justify-center space-y-10">
+              <div class="w-36 h-36">
+                <img src="{{this.img}}" alt="" />
+              </div>
+            </div>
+            <p
+              class="mb-12 opacity-80 font-medium font-poppins italic text-white text-lg"
+            >{{this.content}}</p>
+            <p class="font-bold italic text-white">{{this.footer}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
+
+{{! -------------------- }}
+
+{{! Explore Turkey with us }}
+
+<section
+  class="w-full py-24 bg-[#F9F3EE] flex flex-col justify-center items-center gap-10"
+>
+  <h1 class="font-poppins text-5xl text-center" data-aos="fade-right">
+    Explore Turkey with us
+  </h1>
+  <a
+    href="/Private-Tours"
+    class="bg-red-400 hover:bg-blue-gray-400 transition text-white rounded-full py-4 px-9 font-bold"
+    data-aos="fade-up"
+  >
+    View Tours
+  </a>
+</section>
+
+{{! -------------------- }}
+
+{{! Subscribe to Our Newsletter }}
+
+<section
+  class="w-full h-auto flex flex-col justify-center items-center gap-10 py-10"
+  data-aos="zoom-in-down"
+>
+  <h1 class="text-center font-poppins text-[#0791BE] font-medium text-4xl">
+    Subscribe to Our Newsletter
+  </h1>
+  <form
+    action="/Subscribe-To-Our-Newsletter"
+    method="POST"
+    class="flex flex-col justify-center items-center gap-8"
+  >
+    <div class="relative h-11 w-full min-w-[300px] md:min-w-[32vw]">
+      <input
+        type="text"
+        name="name"
+        placeholder="First Name"
+        class="peer h-auto w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
+      />
+      <label
+        class="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-auto w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-900 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+      >
+        First Name
+      </label>
+    </div>
+    <div class="relative h-11 w-full min-w-[300px] md:min-w-[32vw]">
+      <input
+        placeholder="Email"
+        name="email"
+        class="peer h-auto w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
+      />
+      <label
+        class="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-auto w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-900 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+      >
+        Email
+      </label>
+    </div>
+    <button
+      type="submit"
+      class="bg-[#0791BE] hover:bg-blue-600 transition rounded w-full text-white font-semibold text-xl py-1.5"
+    >
+      Subscribe
+    </button>
+  </form>
+</section>
+
+{{! -------------------- }}
+
+{{! Gallery }}
+<div class="grid grid-cols-2 gap-4 md:grid-cols-4 container px-3 md:px-0">
+
+  <div class="grid gap-4">
+    <div>
+      <img
+        src="Gallery/1.webp"
+        alt=""
+        class="h-auto max-w-full rounded-lg object-cover object-center"
+        data-aos="zoom-in-down"
+      />
+    </div>
+    <div>
+      <img
+        src="Gallery/3.webp"
+        alt=""
+        class="h-auto max-w-full rounded-lg object-cover object-center"
+        data-aos="zoom-in-down"
+      />
+    </div>
+  </div>
+
+  <div class="grid gap-4">
+    <div>
+      <img
+        src="Gallery/4.webp"
+        alt=""
+        class="h-auto max-w-full rounded-lg object-cover object-center"
+        data-aos="zoom-in-down"
+      />
+    </div>
+    <div>
+      <img
+        src="Gallery/5.webp"
+        alt=""
+        class="h-auto max-w-full rounded-lg object-cover object-center"
+        data-aos="zoom-in-down"
+      />
+    </div>
+  </div>
+
+  <div class="grid gap-4">
+    <div>
+      <img
+        src="Gallery/6.jpg"
+        alt=""
+        class="h-auto max-w-full rounded-lg object-cover object-center"
+        data-aos="zoom-in-down"
+      />
+    </div>
+    <div>
+      <img
+        src="Gallery/7.webp"
+        alt=""
+        class="h-auto max-w-full rounded-lg object-cover object-center"
+        data-aos="zoom-in-down"
+      />
+    </div>
+    <div>
+      <img
+        src="Gallery/8.webp"
+        alt=""
+        class="h-auto max-w-full rounded-lg object-cover object-center"
+        data-aos="zoom-in-down"
+      />
+    </div>
+  </div>
+
+  <div class="grid gap-4">
+    <div>
+      <img
+        src="Gallery/9.webp"
+        alt=""
+        class="h-auto max-w-full rounded-lg object-cover object-center"
+        data-aos="zoom-in-down"
+      />
+    </div>
+    <div>
+      <img
+        src="Gallery/10.webp"
+        alt=""
+        class="h-auto max-w-full rounded-lg object-cover object-center"
+        data-aos="zoom-in-down"
+      />
+    </div>
+  </div>
+
+</div>
+<br />
+
+{{! -------------------- }}

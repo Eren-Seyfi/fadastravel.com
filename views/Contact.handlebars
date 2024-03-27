@@ -1,0 +1,164 @@
+<div class="w-full h-auto">
+
+  <div class="w-full h-auto md:h-[300px] overflow-hidden">
+    <img
+      src="/img/contact/1.webp"
+      alt="Kesilmiş Resim"
+      class="object-cover object-top w-full h-auto"
+    />
+  </div>
+
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center justify-items-center px-2 md:px-4 lg:px-16 py-20 space-y-10 md:space-y-0"
+  >
+    {{! Adress }}
+    <div class="w-full h-auto" data-aos="fade-right">
+      <div class="flex items-center h-auto gap-2">
+        <span class="bg-red-500 h-0.5 w-16"></span>
+
+        <span class="text-red-500 text-sm font-medium font-poppins">
+          GET IN TOUCH
+        </span>
+      </div>
+      <form
+        onSubmit="{handleSubmit}"
+        class="mt-8 flex flex-col gap-6 mb-2 md:w-[28rem] max-w-screen-lg"
+      >
+        <input
+          name="name"
+          type="text"
+          class="border border-gray-400 rounded-full p-2.5"
+          placeholder="Your Name"
+          required
+        />
+        <input
+          name="mail"
+          type="mail"
+          class="border border-gray-400 rounded-full p-2.5"
+          placeholder="Your Mail"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Message"
+          class="border border-gray-400 rounded-2xl h-44 p-2.5"
+          required
+        ></textarea>
+
+        <Button
+          type="submit"
+          class="mt-6 py-4 px-8 text-white bg-red-300 rounded-full"
+        >
+          SUBMIT MESSAGE
+        </Button>
+      </form>
+    </div>
+
+    {{! Sosyal Medya }}
+
+    <div
+      class="flex flex-col items-start justify-between gap-10"
+      data-aos="fade-up"
+    >
+      {{! Adress }}
+      <div class="flex flex-col gap-2">
+        {{! Location Address  }}
+        <div class="flex items-center justify-start gap-4">
+          <div class="p-4 bg-[#4792BE] flex justify-center items-center">
+
+            <i class="fa-solid fa-signs-post text-white text-2xl"></i>
+          </div>
+          <div>
+            <a
+              href="https://maps.app.goo.gl/iQ7VwmRyoubCyHjo9"
+              class="text-lg font-semibold"
+            >
+              Location Address
+            </a>
+            <div class="text-sm w-72">
+              Yukarı Mahalle, Fatih Caddesi, No:11 BC Uçhisar/Nevşehir/Türkiye
+            </div>
+          </div>
+        </div>
+
+        {{! Email Address  }}
+        <div class="flex items-center justify-start gap-4">
+          <div class="p-4 bg-[#4792BE] flex justify-center items-center">
+
+            <i class="fa-solid fa-envelope text-white text-2xl"></i>
+          </div>
+          <div>
+            <h1 class="text-lg font-semibold">Email Address</h1>
+            <span class="text-sm">info@fadastravel.com</span>
+          </div>
+        </div>
+
+        {{! Phone Number  }}
+        <div class="flex items-center justify-start gap-4 w-full h-auto">
+
+          <div class="bg-[#4792BE] flex justify-center items-center p-4">
+            <i class="fa-solid fa-phone-volume text-white text-2xl"></i>
+          </div>
+          <div>
+            <h1 class="text-lg font-semibold">Phone Number</h1>
+            <div class="text-sm flex flex-col">
+              <span>Telephone: +90 384 214 1440</span>
+              <span>Mobile: +90 538 216 2785</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {{! Sosyal Medya }}
+      <div class="space-y-4">
+        <h1 class="text-2xl font-bold">Follow us on social media..</h1>
+        <div class="flex items-center justify-start gap-3">
+          {{! Facebook Button  }}
+          <a
+            href="https://www.facebook.com/fadastravel"
+            class="w-10 h-10 border border-red-500 hover:bg-[#3C81C1] flex justify-center items-center group"
+          >
+
+            <i
+              class="fa-brands fa-facebook text-red-500 group-hover:text-white text-xl"
+            ></i>
+          </a>
+          {{! Youtube Button }}
+          <a
+            href="https://www.youtube.com/channel/UCUblskJ-DnRU9qyvye8JS3Q"
+            class="w-10 h-10 border border-red-500 hover:bg-[#3C81C1] flex justify-center items-center group"
+          >
+
+            <i
+              class="fa-brands fa-youtube text-red-500 group-hover:text-white text-xl"
+            ></i>
+          </a>
+          {{! Instagram Button  }}
+          <a
+            href="https://www.instagram.com/fadastravel/"
+            class="w-10 h-10 border border-red-500 hover:bg-[#3C81C1] flex justify-center items-center group"
+          >
+
+            <i
+              class="fa-brands fa-instagram text-red-500 group-hover:text-white text-xl"
+            ></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    {{! Harita }}
+    <div data-aos="fade-left" class="w-full h-auto">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.8829856895372!2d34.79773098761124!3d38.62857289902662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a68ef2439eaab%3A0xbbeeb8adc41a0882!2zWXVrYXLEsSwgRmF0aWggQ2QuIE5vOjExLCA1MDI0MCBVw6doaXNhci9OZXbFn2VoaXIgTWVya2V6L05ldsWfZWhpcg!5e0!3m2!1str!2str!4v1709104523607!5m2!1str!2str"
+        class="border-0 w-full h-[40vh] md:w-[450px] md:h-[450px] p-3 rounded-3xl md:rounded-[3rem]"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+  </section>
+</div>

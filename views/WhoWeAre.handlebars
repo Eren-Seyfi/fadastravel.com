@@ -1,0 +1,252 @@
+{{! Helping people see Turkey in the most beautiful way possible }}
+<section
+  class="w-full h-auto py-10"
+  style="background-image: url('img/whoweare/bg.webp')"
+>
+  <h1 class="text-center pt-16 text-3xl font-light">
+    Helping people see Turkey in the most beautiful way possible
+  </h1>
+  <div class="container py-16 w-full h-auto">
+    <div class="flex flex-col items-center justify-center w-full h-auto gap-10">
+
+      <section
+        class="flex-row container flex justify-center items-center md:flex-nowrap flex-wrap gap-10 px-6"
+      >
+        <div class="space-y-4">
+          <h1 class="font-bold text-xl text-slate-700" data-aos="fade-right">
+            Our Story…
+          </h1>
+          <p
+            class="font-poppins text-lg font-light text-justify w-full md:w-[525px]"
+            data-aos="fade-up"
+          >
+            At Fadas Travel, we are travelers ourselves. As the owners,
+            <a
+              referrerpolicy="no-referrer"
+              href="#team-card"
+              class="text-red-500"
+            >
+              <strong>Makbule</strong>
+            </a>
+            and
+            <a
+              referrerpolicy="no-referrer"
+              href="#team-card"
+              class="text-red-500"
+            >
+              <strong>Seçkin</strong>
+            </a>
+            , we have visited over 30 countries across 6 different continents,
+            stayed in every type of hotel you can think of, and participated in
+            all the activities specific to our travel destinations. But, while
+            experiencing these places, we realized one thing: Turkey, our home
+            country, is not shown enough to the world. That’s why, we have
+            dedicated our life to showing people Turkey in the most beautiful
+            way possible
+          </p>
+        </div>
+        <img
+          src="img/whoweare/1.webp"
+          class="rounded-full w-[35rem]"
+          priority="{true}"
+          data-aos="fade-left"
+        />
+      </section>
+
+      <section
+        class="flex-row-reverse container flex justify-center items-center md:flex-nowrap flex-wrap gap-10 px-6"
+      >
+        <div class="space-y-4">
+          <h1 class="font-bold text-xl text-slate-700" data-aos="fade-left">
+            We Care About Your Turkish Experience…
+          </h1>
+          <p
+            class="font-poppins text-lg font-light text-justify w-full md:w-[525px]"
+            data-aos="fade-up"
+          >
+            As experienced travelers we understand the problems that come your
+            way and know what bad hospitality looks like. With us, you are in
+            safe hands! We have been working with our guides, partner hotels,
+            and transportation managers for years and designed our tours to be
+            as comfortable and enjoyable as possible. Instead of worrying about
+            minor problems we want you to enjoy our beautiful country of Turkey!
+          </p>
+        </div>
+        <img
+          src="img/whoweare/2.webp"
+          class="rounded-full w-[35rem]"
+          priority="{true}"
+          data-aos="fade-up"
+          alt=""
+        />
+      </section>
+
+      <section
+        class="flex-row container flex justify-center items-center md:flex-nowrap flex-wrap gap-10 px-6"
+      >
+        <div class="space-y-4">
+          <h1 class="font-bold text-xl text-slate-700" data-aos="fade-right">
+            Owners of Mak's Cave House…
+          </h1>
+          <p
+            class="font-poppins text-lg font-light text-justify w-full md:w-[525px]"
+            data-aos="fade-up"
+          >
+            Our hotel, Mak's Cave House, opened in June 2021 in the town of
+            Uçhisar, Cappadocia. It is a luxury boutique hotel with impressive
+            views of the Cappadocia landscape. Since our opening, we have
+            quickly become the highest rated hotel in Cappadocia with hundreds
+            of people speaking of our comfort and hospitality. We have received
+            countless gifts and awards due to the welcoming atmosphere and
+            personal touch our hotel provides. With Fadas Travel, our mission is
+            to provide these same concepts we deliver in our hotel to your
+            entire stay in Turkey.
+          </p>
+        </div>
+        <img
+          src="img/whoweare/3.webp"
+          class="rounded-full w-[35rem]"
+          priority="{true}"
+          data-aos="fade-left"
+        />
+      </section>
+
+    </div>
+  </div>
+</section>
+
+{{! Meet the Team }}
+<section class="space-y-10 pt-20 w-full h-auto">
+  <h1
+    class="text-center text-5xl text-red-300 font-bold w-full h-auto"
+    data-aos="zoom-in"
+  >
+    Meet the Team
+  </h1>
+  <span class="flex justify-center w-full h-auto">
+    <hr class="bg-blue-500 h-0.5 w-[80vw]" />
+  </span>
+
+  <div
+    class="container flex flex-wrap gap-4 items-start justify-center w-full h-auto"
+  >
+
+    {{#each TeamCard}}
+      <section
+        class="flex flex-col justify-center items-center h-auto w-96 gap-2 p-4"
+        data-aos="fade-up"
+        id="team-card"
+      >
+        <img src=" {{this.src}}" class="rounded-3xl h-96" alt="" />
+
+        <h1 class="font-bold text-lg text-red-500 text-center">
+          {{this.head}}
+        </h1>
+        <span class="text-black font-semibold">
+          {{this.role}}
+        </span>
+        <span class="text-black text-justify text-base font-light">
+          {{this.content}}
+        </span>
+      </section>
+    {{/each}}
+  </div>
+</section>
+
+{{! Reviews }}
+<section
+  class="w-full min-h-screen py-10 md:min-h-[45rem] bg-[#04A9DE] flex flex-col justify-center items-center"
+>
+  <p class="mb-4 text-3xl md:text-4xl lg:text-5xl text-white">Reviews</p>
+  <div class="owl-carousel owl-theme container h-auto w-full reviews">
+    {{#each GlobalReviews}}
+      <div class="item h-auto w-full">
+        <div
+          class="h-auto w-full flex items-center justify-center bg-[#04A9DE]"
+        >
+          <div class="w-3/4 text-center space-y-10">
+            <div class="flex flex-col items-center justify-center space-y-10">
+              <div class="w-36 h-36">
+                <img src="{{this.img}}" alt="" />
+              </div>
+            </div>
+            <p
+              class="mb-12 opacity-80 font-medium font-poppins italic text-white text-lg"
+            >{{this.content}}</p>
+            <p class="font-bold italic text-white">{{this.footer}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
+
+{{! -------------------- }}
+
+{{! Explore Turkey with us }}
+
+<section
+  class="w-full py-24 bg-[#F9F3EE] flex flex-col justify-center items-center gap-10"
+>
+  <h1 class="font-poppins text-5xl text-center" data-aos="fade-right">
+    Explore Turkey with us
+  </h1>
+  <a
+    href="/Private-Tours"
+    class="bg-red-400 hover:bg-blue-gray-400 transition text-white rounded-full py-4 px-9 font-bold"
+    data-aos="fade-up"
+  >
+    View Tours
+  </a>
+</section>
+
+{{! -------------------- }}
+
+{{! Subscribe to Our Newsletter }}
+<section
+  class="w-auto h-auto flex flex-col justify-center items-center gap-10 py-10"
+  data-aos="zoom-in-down"
+>
+  <h1 class="text-center font-poppins text-[#0791BE] font-medium text-4xl">
+    Subscribe to Our Newsletter
+  </h1>
+  <form
+    action="/Subscribe-To-Our-Newsletter"
+    method="POST"
+    class="flex flex-col justify-center items-center gap-8"
+  >
+    <div class="relative h-11 w-auto min-w-[300px] md:min-w-[32vw]">
+      <input
+        type="text"
+        name="name"
+        placeholder="First Name"
+        class="peer h-auto w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
+      />
+      <label
+        class="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-auto w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-auto after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-900 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+      >
+        First Name
+      </label>
+    </div>
+    <div class="relative h-11 w-auto min-w-[300px] md:min-w-[32vw]">
+      <input
+        placeholder="Email"
+        name="email"
+        class="peer h-auto w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100"
+      />
+      <label
+        class="after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-auto w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-auto after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-900 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+      >
+        Email
+      </label>
+    </div>
+    <button
+      type="submit"
+      class="bg-[#0791BE] hover:bg-blue-600 transition rounded w-full text-white font-semibold text-xl py-1.5"
+    >
+      Subscribe
+    </button>
+  </form>
+</section>
+
+{{! -------------------- }}

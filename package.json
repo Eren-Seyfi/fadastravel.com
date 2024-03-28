@@ -14,13 +14,13 @@
   },
   "name": "express",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "index.js",
   "type": "module",
   "devDependencies": {
     "tailwindcss": "^3.4.1"
   },
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon index.js",
     "tailwind": "npx tailwindcss -i ./public/css/input.css -o ./public/css/style.css --watch"
   },
   "keywords": [],

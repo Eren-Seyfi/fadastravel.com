@@ -51,7 +51,7 @@ getRoutes.get("/Activity-Guide/:id", (req, res) => {
   res.sendFile(pdfPath);
 });
 
-getRoutes.get("/:turname", async (req, res) => {
+getRoutes.get("/Private-Tours/:turname", async (req, res) => {
   const turname = req.params.turname;
   let data;
 

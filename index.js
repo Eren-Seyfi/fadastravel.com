@@ -46,4 +46,4 @@ app.use((req, res, next) => {
 app.use("/", getRoutes);
 app.use("/", postRoutes);
 
-app.listen(3000);
+app.listen(process.env.PORT | 3000);

@@ -10,6 +10,7 @@ import Navbar from "./db/Navbar.js";
 
 const app = express();
 var upload = multer();
+const PORT = process.env.PORT || 5001;
 
 app.use(express.static("public"));
 app.engine("handlebars", engine());
@@ -46,4 +47,4 @@ app.use((req, res, next) => {
 app.use("/", getRoutes);
 app.use("/", postRoutes);
 
-app.listen(process.env.PORT | 3000);
+app.listen(PORT);

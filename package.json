@@ -24,7 +24,11 @@
     "start": "node index.js",
     "tailwind": "npx tailwindcss -i ./public/css/input.css -o ./public/css/style.css --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
   "author": "",
   "license": "ISC",
   "description": ""

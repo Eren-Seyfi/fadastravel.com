@@ -2,7 +2,14 @@ import express from "express";
 import { engine } from "express-handlebars";
 import bodyParser from "body-parser";
 import multer from "multer";
-import router from "./routes/main.js";
+// import router from "./routes/main.js";
+import "dotenv/config";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+import postRoutes from "./routes/postRoutes.js";
+import getRoutes from "./routes/getRoutes.js";
 
 import Navbar from "./db/Navbar.js";
 
@@ -22,6 +29,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //form-urlencoded
 
 // for parsing multipart/form-data
+
 app.use(upload.array());
 
 const menuItems = Navbar;
@@ -39,6 +47,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/", router);
+// app.use("/", router);
+app.use("/", getRoutes);
+app.use("/", postRoutes);
 
 app.listen(3000);

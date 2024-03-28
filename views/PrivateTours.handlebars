@@ -132,78 +132,108 @@
   {{! -------------------- }}
 
   {{! YouTube Video Player and Accordion Menü }}
-  <section class="px-2 md:px-0 lg:w-[70rem]">
+  <section class="px-2 md:px-0 lg:w-[70rem] space-y-10">
+    <h1 class="text-2xl my-6 font-semibold text-gray-700">Turkey Travel FAQs</h1>
 
-    <div class="relative mb-3">
-      <h6 class="mb-0">
-        <button
-          class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
-          data-collapse-target="animated-collapse-1"
-        >
-          <span>What is Material Tailwind?</span>
-          <i
-            class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
-          ></i>
-        </button>
-      </h6>
-      <div
-        data-collapse="animated-collapse-1"
-        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
-      >
-        <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
-          We're not always in the position that we want to be at. We're
-          constantly growing. We're constantly making mistakes. We're constantly
-          trying to express ourselves and actualize our dreams.
+    <div class="accordion-container">
+      {{! Do I need a visa to travel to Turkey? }}
+      <div class="ac border-none border-0">
+
+        <h2 class="ac-header h-12 border-none border-0">
+          <button type="button" class="ac-trigger">
+            Do I need a visa to travel to Turkey?</button>
+        </h2>
+
+        <div class="ac-panel px-10 text-justify border-none border-0 space-y-2">
+          Depending on where you’re from, you may need a visa to enter Turkey.
+          Travelers from many countries including New Zealand, the United
+          Kingdom, Denmark, Finland, France, Germany, Japan, Norway, Sweden, and
+          Switzerland don’t require a visa for stays of less than three months
+          if the trip is for tourism purposes. Foreign nationals from countries
+          including Australia, Canada, South Africa, and the USA will need an
+          e-visa. An e-visa allows you to stay in Turkey for up to 90 days
+          within a 180-day period. E-visas will be verified by passport control
+          officers on their systems at ports of entry, but it’s a good idea to
+          keep a copy of your e-visa on your phone, tablet, or as a hard copy,
+          just in case. To see the complete list of countries that do and do not
+          require a visa to travel to Turkey, please visit the
+          <a
+            href="https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa"
+            target="_blank"
+            class="text-red-500"
+          >
+            official Turkish government website.
+          </a>
         </div>
       </div>
-    </div>
+      {{! What's the weather like in Turkey? }}
+      <div class="ac border-none border-0">
 
-    <div class="relative mb-3">
-      <h6 class="mb-0">
-        <button
-          class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
-          data-collapse-target="animated-collapse-2"
-        >
-          <span>How to use Material Tailwind?</span>
-          <i
-            class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
-          ></i>
-        </button>
-      </h6>
-      <div
-        data-collapse="animated-collapse-2"
-        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
-      >
-        <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
-          We're not always in the position that we want to be at. We're
-          constantly growing. We're constantly making mistakes. We're constantly
-          trying to express ourselves and actualize our dreams.
+        <h2 class="ac-header h-12 border-none border-0">
+          <button type="button" class="ac-trigger h-full">
+            What's the weather like in Turkey?</button>
+        </h2>
+
+        <div class="ac-panel px-10 text-justify border-none border-0 space-y-2">
+          Turkey is a very seasonal country, and can be enjoyed in every part of
+          the year. It is hot in the summer and can even snow in the winter.
+          Each season has its own beauty, so we recommend our country year
+          round. We will let you know what clothing to pack before your trip in
+          order to ensure you are weather-prepared!
         </div>
       </div>
-    </div>
+      {{! Are credit cards accepted in Turkey? }}
+      <div class="ac border-none border-0">
 
-    <div class="relative mb-3">
-      <h6 class="mb-0">
-        <button
-          class="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
-          data-collapse-target="animated-collapse-3"
-        >
-          <span>What can I do with Material Tailwind?</span>
-          <i
-            class="absolute right-0 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
-          ></i>
-        </button>
-      </h6>
-      <div
-        data-collapse="animated-collapse-3"
-        class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
-      >
-        <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
-          We're not always in the position that we want to be at. We're
-          constantly growing. We're constantly making mistakes. We're constantly
-          trying to express ourselves and actualize our dreams.
+        <h2 class="ac-header h-12 border-none border-0">
+          <button type="button" class="ac-trigger h-full">
+            Are credit cards accepted in Turkey?</button>
+        </h2>
+
+        <div class="ac-panel px-10 text-justify border-none border-0 space-y-2">
+          Major credit cards are widely accepted in tourist shopping areas and
+          large hotels in Turkey. However, we still recommend carrying some cash
+          just in case. We can also exchange your currency ourselves at current
+          conversion rates during your trip, so you don’t need to worry about
+          that!
         </div>
       </div>
+      {{! Are meals included? }}
+      <div class="ac border-none border-0">
+
+        <h2 class="ac-header h-12 border-none border-0">
+          <button type="button" class="ac-trigger h-full">
+            Are meals included?</button>
+        </h2>
+
+        <div class="ac-panel px-10 text-justify border-none border-0 space-y-2">
+          All breakfasts are included during your stays and are served at our
+          hotels. Lunch is included during the days you are touring a city.
+          Dinners are not included except for the Turkish Dance Show in
+          Cappadocia. However, we will provide you with the best locations to
+          eat for each city during your stay, so food will definitely won’t be a
+          problem!
+        </div>
+      </div>
+      {{! Can I use my mobile phone while in Turkey? }}
+      <div class="ac border-none border-0">
+
+        <h2 class="ac-header h-12 border-none border-0">
+          <button type="button" class="ac-trigger h-full">
+            Can I use my mobile phone while in Turkey?</button>
+        </h2>
+
+        <div class="ac-panel px-10 text-justify border-none border-0 space-y-2">
+          Yes, most mobile services will work in Turkey. Coverage is good in
+          large cities like Istanbul, but may be patchy in remote areas. If
+          you’re visiting for a week or so, it might be better to use the SIM
+          card from your mobile carrier at home. You’ll also need to make sure
+          you have global roaming activated before you depart. However, fees can
+          be on the pricey side so double-check what fees are involved to avoid
+          an unexpected phone bill upon your return.
+        </div>
+      </div>
+
     </div>
 
     <section class="flex justify-center items-center container">
@@ -216,7 +246,9 @@
         class="w-full h-[30vh] md:h-[70vh]"
       ></iframe>
     </section>
+
   </section>
+
   {{! -------------------- }}
 
   {{! Explore Turkey with us }}
@@ -249,7 +281,7 @@
     </h1>
     <form
       action="/Subscribe-To-Our-Newsletter"
-      method="post"
+      method="POST"
       class="flex flex-col justify-center items-center gap-8"
     >
       <div class="relative h-11 w-full min-w-[300px] md:min-w-[32vw]">

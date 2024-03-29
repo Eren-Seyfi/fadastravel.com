@@ -20,30 +20,30 @@ getRoutes.get("/", (req, res) => {
   res.render("Home", { ToursCard, GlobalReviews });
 });
 
-getRoutes.get("/Who-We-Are", (req, res) => {
+getRoutes.get("/whoweare", (req, res) => {
   res.render("WhoWeAre", { TeamCard, GlobalReviews });
 });
 
 // /Private-Tours rotası
-getRoutes.get("/Private-Tours", (req, res) => {
+getRoutes.get("/privatetours", (req, res) => {
   res.render("PrivateTours", { ToursCard, GlobalReviews });
 });
 
-getRoutes.get("/Custom-Tours", (req, res) => {
+getRoutes.get("/activityguideform/customitinerary", (req, res) => {
   res.render("activity_guide_form/CustomItinerary");
 });
 
-getRoutes.get("/Minik-Ayaklar", (req, res) => {
+getRoutes.get("/minikayaklar", (req, res) => {
   res.render("MinikAyaklar", { MinikAyaklar });
 });
-getRoutes.get("/Partner-With-Us", (req, res) => {
+getRoutes.get("/partnerwithus", (req, res) => {
   res.render("PartnerWithUs");
 });
-getRoutes.get("/Contact", (req, res) => {
+getRoutes.get("/contact", (req, res) => {
   res.render("Contact");
 });
 
-getRoutes.get("/Activity-Guide/:id", (req, res) => {
+getRoutes.get("/activityguide/:id", (req, res) => {
   // İstekten gelen ":id" parametresini kullanarak PDF dosyasının yolunu oluşturun
   const pdfPath = join(__dirname, "../public/pdf", req.params.id + ".pdf");
 
@@ -51,7 +51,7 @@ getRoutes.get("/Activity-Guide/:id", (req, res) => {
   res.sendFile(pdfPath);
 });
 
-getRoutes.get("/Private-Tours/:turname", async (req, res) => {
+getRoutes.get("/privatetours/:turname", async (req, res) => {
   const turname = req.params.turname;
   let data;
 

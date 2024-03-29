@@ -1,11 +1,15 @@
 const Navbar = [
   { title: "Home", link: "/", isActive: false },
-  { title: "Who We Are", link: "/Who-We-Are", isActive: false },
-  { title: "Private Tours", link: "/Private-Tours", isActive: false },
-  { title: "Custom Tours", link: "/Custom-Tours", isActive: false },
-  { title: "Minik Ayaklar", link: "/Minik-Ayaklar", isActive: false },
-  { title: "Partner With Us", link: "/Partner-With-Us", isActive: false },
-  { title: "Contact", link: "/Contact", isActive: false },
+  { title: "Who We Are", link: "/whoweare", isActive: false },
+  { title: "Private Tours", link: "/privatetours", isActive: false },
+  {
+    title: "Custom Tours",
+    link: "/activityguideform/customitinerary",
+    isActive: false,
+  },
+  { title: "Minik Ayaklar", link: "/minikayaklar", isActive: false },
+  { title: "Partner With Us", link: "/partnerwithus", isActive: false },
+  { title: "Contact", link: "/contact", isActive: false },
 ];
 
 export default Navbar;

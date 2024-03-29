@@ -36,6 +36,9 @@ getRoutes.get("/activityguideform/customitinerary", (req, res) => {
 getRoutes.get("/minikayaklar", (req, res) => {
   res.render("MinikAyaklar", { MinikAyaklar });
 });
+getRoutes.get("/Minik-Ayaklar", (req, res) => {
+  res.render("MinikAyaklar", { MinikAyaklar });
+});
 getRoutes.get("/partnerwithus", (req, res) => {
   res.render("PartnerWithUs");
 });

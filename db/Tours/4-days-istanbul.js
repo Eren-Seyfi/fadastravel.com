@@ -1,11 +1,13 @@
 const _4DaysIstanbul = [
   // Content
   [
-    [{
-      Headers: "4 DAYS ISTANBUL",
-      Content:
-        "Get to the heart of Istanbul’s culture and legacy on this premium trip. Stay in luxury accommodations in Old City with historic views. Enjoy guided tours of the Bosphorus, Sultan Ahmet, Topkapi Palace, Hagia Sophia and much more. Fall in love with Istanbul’s beauty on this 4 day journey.",
-    }],
+    [
+      {
+        Headers: "4 DAYS ISTANBUL",
+        Content:
+          "Get to the heart of Istanbul’s culture and legacy on this premium trip. Stay in luxury accommodations in Old City with historic views. Enjoy guided tours of the Bosphorus, Sultan Ahmet, Topkapi Palace, Hagia Sophia and much more. Fall in love with Istanbul’s beauty on this 4 day journey.",
+      },
+    ],
 
     [
       {
@@ -20,8 +22,9 @@ const _4DaysIstanbul = [
         LuxuryAccomodations: ["Garden House Hotel or similar"],
         IncludedMeals: ["Welcome appetizers at hotel"],
         IncludedActivity: [""],
-        AddOnActivities: ["Turkish Bath (Hamam) – 50 euros / person"],
+        AddOnActivities: ["Turkish Bath (Hamam) – 70 euros / person"],
       },
+
       {
         id: 2,
         title: "Day 2: Istanbul",
@@ -35,9 +38,10 @@ const _4DaysIstanbul = [
         IncludedActivity: ["Guided Old City Walking Tour"],
         AddOnActivities: [
           "Private Dinner Cruise – 500 euros (up to 4 people)",
-          "Group Dinner Cruise – 90 euros / person",
+          "Group Dinner Cruise – 100 euros / person",
         ],
       },
+
       {
         id: 3,
         title: "Day 3: Istanbul",
@@ -50,10 +54,11 @@ const _4DaysIstanbul = [
         IncludedMeals: ["Breakfast and Lunch"],
         IncludedActivity: ["Guided Old City Walking Tour"],
         AddOnActivities: [
-          "Mevlevi Ceremony – 50 euros / person",
-          "Professional Photo Shooting in Istanbul City – 300 euros",
+          "Mevlevi Ceremony – 60 euros / person",
+          "Professional Photo Shooting in Istanbul City – 350 euros",
         ],
       },
+      
       {
         id: 4,
         title: "Day 4: Istanbul",
@@ -78,7 +83,7 @@ const _4DaysIstanbul = [
       ["3 Breakfasts, 2 Lunches"],
       [
         [
-          { Head: "Istanbul" },
+          [""],
           [
             "Private Dinner Cruise - 500 euros (up to 4 people)",
             "Group Dinner Cruise - 100 euros / person",
@@ -89,7 +94,7 @@ const _4DaysIstanbul = [
         ],
       ],
     ],
-    
+
     [
       "/img/tours/carousel/4-DAYS-ISTANBUL/1.webp",
       "/img/tours/carousel/4-DAYS-ISTANBUL/2.webp",

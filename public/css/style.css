@@ -4065,6 +4065,10 @@ video {
     height: 70vh;
   }
 
+  .md\:min-h-\[35rem\]{
+    min-height: 35rem;
+  }
+
   .md\:min-h-\[45rem\]{
     min-height: 45rem;
   }

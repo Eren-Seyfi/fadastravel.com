@@ -47,7 +47,14 @@ $(".tours").owlCarousel({
 
 new Accordion(".accordion-container");
 
-const datepicker = flatpickr("#date-picker", {});
+const today = new Date();
+const threeDaysLater = new Date(today);
+threeDaysLater.setDate(today.getDate() + 3);
+
+const datepicker = flatpickr("#date-picker", {
+  minDate: threeDaysLater,
+  theme: "material_green"
+});
 
 // styling the date picker
 const calendarContainer = datepicker.calendarContainer;

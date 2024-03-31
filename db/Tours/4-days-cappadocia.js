@@ -24,7 +24,7 @@ const _4DaysCappadocia = [
         LuxuryAccomodations: ["Mak’s Cave House or similar"],
         IncludedMeals: ["Welcome appetizers at hotel"],
         IncludedActivity: [],
-        AddOnActivities: ["Turkish Bath (Hamam) - 50 euros / person"],
+        AddOnActivities: ["Turkish Bath (Hamam) - 60 euros / person"],
       },
       {
         id: 2,
@@ -40,7 +40,7 @@ const _4DaysCappadocia = [
         IncludedActivity: ["Guided Cappadocia Tour"],
         AddOnActivities: [
           "Hot Air Balloon Tour - please ask our special price",
-          "Sunset Jeep Safari - 40 euros / person",
+          "Sunset Jeep Safari - 50  euros / person",
         ],
       },
       {
@@ -56,9 +56,9 @@ const _4DaysCappadocia = [
         IncludedMeals: ["Breakfast and Dinner"],
         IncludedActivity: ["Turkish Night"],
         AddOnActivities: [
-          "Sunset ATV/QUAD - 40 euros / person",
-          "Sunset Horseback Riding - 40 euros / person",
-          "Professional Photo Shooting with Balloons and Landscape - 300 euros",
+          "Sunset ATV/QUAD - 45  euros / person",
+          "Sunset Horseback Riding - 45  euros / person",
+          "Professional Photo Shooting with Balloons and Landscape - 350  euros",
         ],
       },
       {
@@ -88,7 +88,7 @@ const _4DaysCappadocia = [
       ["3 Breakfasts, 1 Lunches, 1 Dinner"],
       [
         [
-          { Head: "" },
+          [""],
           [
             "Hot Air Balloon Tour - please ask price",
             "Sunset Jeep Safari - 50 euros / person",

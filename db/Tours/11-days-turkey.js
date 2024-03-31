@@ -8,6 +8,7 @@ const _11DaysTurkey = [
           "Get on a 11-day journey to Turkey that reveals the beauties of Cappadocia, Antalya, and Istanbul. In Cappadocia, stay in our own luxurious hotel with fairy-chimney and hot air balloon views. Enjoy guided tours of the Göreme Open-Air Museum, take a local pottery lesson in Avanos, and savor the regional cuisine in a Turkish Dance Show. Then, fly to Antalya, where your trip continues by the Mediterranean Sea. Stay in luxury boutique accommodations in Antalya. During your guided tours, explore the ancient history of the city and the mineral-rich limestone pools of Pamukkale. Conclude your journey in the vibrant city of Istanbul. Stay in luxury accommodations in Old City and enjoy guided tours of the Bosphorus, Sultan Ahmet, Topkapi Palace, Hagia Sophia and much more. Fall in love with Turkey’s culture and beauty on this tour.",
       },
     ],
+
     [
       {
         id: 1,
@@ -23,7 +24,7 @@ const _11DaysTurkey = [
         LuxuryAccomodations: ["Mak’s Cave House or similar"],
         IncludedMeals: ["Welcome appetizers at hotel"],
         IncludedActivity: [],
-        AddOnActivities: ["Turkish Bath (Hamam) – 50 euros / person"],
+        AddOnActivities: ["Turkish Bath (Hamam) – 60 euros / person"],
       },
       {
         id: 2,
@@ -39,9 +40,10 @@ const _11DaysTurkey = [
         IncludedActivity: ["Guided Cappadocia Tour"],
         AddOnActivities: [
           "Hot Air Balloon Tour – 250 euros / person",
-          "Sunset Jeep Safari – 40 euros / person",
+          "Sunset Jeep Safari – 50 euros / person",
         ],
       },
+
       {
         id: 3,
         title: "Day 3: Cappadocia",
@@ -55,9 +57,9 @@ const _11DaysTurkey = [
         IncludedMeals: ["Breakfast and Dinner"],
         IncludedActivity: ["Turkish Night"],
         AddOnActivities: [
-          "Sunset ATV/QUAD – 40 euros / person",
-          "Sunset Horseback Riding – 40 euros / person",
-          "Professional Photo Shooting with Balloons and Landscape – 300 euros",
+          "Sunset ATV/QUAD – 45 euros / person",
+          "Sunset Horseback Riding – 45 euros / person",
+          "Professional Photo Shooting with Balloons and Landscape – 350 euros",
         ],
       },
       {
@@ -74,7 +76,7 @@ const _11DaysTurkey = [
         LuxuryAccomodations: ["Akra Hotel or similar"],
         IncludedMeals: ["Breakfast"],
         IncludedActivity: [""],
-        AddOnActivities: ["Turkish Bath (Hamam) – 50 euros / person"],
+        AddOnActivities: ["Turkish Bath (Hamam) – 60 euros / person"],
       },
       {
         id: 5,
@@ -101,7 +103,7 @@ const _11DaysTurkey = [
         LuxuryAccomodations: ["Akra Hotel or similar"],
         IncludedMeals: ["Breakfast and Lunch"],
         IncludedActivity: ["Guided Pamukkale Tour"],
-        AddOnActivities: ["Professional Photo Shooting in Antalya – 300 euros"],
+        AddOnActivities: ["Professional Photo Shooting in Antalya – 350 euros"],
       },
       {
         id: 7,
@@ -119,6 +121,7 @@ const _11DaysTurkey = [
         IncludedActivity: [],
         AddOnActivities: ["Turkish Bath (Hamam) – 60 euros / person"],
       },
+
       {
         id: 8,
         title: "Day 8: Istanbul",
@@ -144,10 +147,11 @@ const _11DaysTurkey = [
         IncludedMeals: ["Breakfast and Lunch"],
         IncludedActivity: ["Guided Bosphorus Cruise Tour"],
         AddOnActivities: [
-          "Mevlevi Ceremony – 50 euros / person",
-          "Professional Photo Shooting in Istanbul City – 300 euros",
+          "Mevlevi Ceremony – 60 euros / person",
+          "Professional Photo Shooting in Istanbul City – 350 euros",
         ],
       },
+
       {
         id: 10,
         title: "Day 10: Istanbul",
@@ -162,7 +166,7 @@ const _11DaysTurkey = [
         IncludedActivity: [],
         AddOnActivities: [
           "Private Dinner Cruise – 500 euros (up to 4 people)",
-          "Group Dinner Cruise – 90 euros / person",
+          "Group Dinner Cruise – 100 euros / person",
         ],
       },
       {
@@ -179,6 +183,7 @@ const _11DaysTurkey = [
         AddOnActivities: [""],
       },
     ],
+
     [
       [
         "Mak’s Cave House or similar (Cappadocia)",
@@ -199,28 +204,33 @@ const _11DaysTurkey = [
         "Guided Pamukkale Tour",
       ],
       ["10 Breakfasts, 5 Lunches, 1 Dinner"],
+
       [
-        { Head: "Cappadocia" },
         [
-          "Hot Air Balloon Tour - please ask price",
-          "Sunset Jeep Safari - 50 euros / person",
-          "Sunset ATV/QUAD - 45 euros / person",
-          "Sunset Horseback Riding - 45 euros / person",
-          "Turkish Bath (Hamam) - 60 euros / person",
-          "Professional Photo Shooting with Balloons and Landscape - 350 euros",
+          ["Cappadocia"],
+          [
+            "Hot Air Balloon Tour - please ask price",
+            "Sunset Jeep Safari - 50 euros / person",
+            "Sunset ATV/QUAD - 45 euros / person",
+            "Sunset Horseback Riding - 45 euros / person",
+            "Turkish Bath (Hamam) - 60 euros / person",
+            "Professional Photo Shooting with Balloons and Landscape - 350 euros",
+          ],
         ],
-      ],
-      [
-        { Head: "Istanbul" },
+
         [
-          "Private Dinner Cruise - 500 euros (up to 4 people)",
-          "Group Dinner Cruise - 100 euros / person",
-          "Mevlevi Ceremony - 60 euros / person",
-          "Turkish Bath (Hamam) - 70 euros / person",
-          "Professional Photo Shooting in Istanbul City - 350 euros",
+          ["Istanbul"],
+          [
+            "Private Dinner Cruise - 500 euros (up to 4 people)",
+            "Group Dinner Cruise - 100 euros / person",
+            "Mevlevi Ceremony - 60 euros / person",
+            "Turkish Bath (Hamam) - 70 euros / person",
+            "Professional Photo Shooting in Istanbul City - 350 euros",
+          ],
         ],
+
         [
-          { Head: "Antalya" },
+          ["Antalya"],
           [
             "Turkish Bath (Hamam) - 60 euros / person",
             "Boat Party at Night - 100 euros / person",
@@ -234,6 +244,7 @@ const _11DaysTurkey = [
         ],
       ],
     ],
+
     [
       "/img/tours/carousel//11-DAYS-TURKEY/1.webp",
       "/img/tours/carousel//11-DAYS-TURKEY/2.webp",

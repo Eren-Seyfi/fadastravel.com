@@ -13,4 +13,3 @@ export default async function sendContact(data) {
   };
   await transporterMail.sendMail(mailOptions);
 }
-// to: "info@fadastravel.com",

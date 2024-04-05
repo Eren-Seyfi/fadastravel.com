@@ -3413,14 +3413,6 @@ video {
   forced-color-adjust: none;
 }
 
-.\[options\:IParseOptions\]{
-  options: IParseOptions;
-}
-
-.\[root\:Root\]{
-  root: Root;
-}
-
 .owl-nav {
   position: absolute;
   top: 50%;
@@ -3620,11 +3612,6 @@ video {
 .after\:w-auto::after{
   content: var(--tw-content);
   width: auto;
-}
-
-.after\:w-full::after{
-  content: var(--tw-content);
-  width: 100%;
 }
 
 .after\:flex-grow::after{

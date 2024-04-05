@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@20.1.0/build/css/intlTelInput.css">
     <link rel="stylesheet" href="/css/accordion.css">
   </head>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  function onSubmit(token) { document.getElementById("Contact").submit(); }
+</script>
+
   <body class="w-auto h-full flex flex-col justify-between">
 
     <nav class="py-2 pt-0 md:pt-4 space-y-16 container w-full">
@@ -189,7 +194,14 @@
       </div>
     </footer>
 
-
+<script>
+  function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6Lc3mbEpAAAAAM88IJPxND1vfvnNUhaMawAv37-g', {action: 'LOGIN'});
+    });
+  }
+</script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>

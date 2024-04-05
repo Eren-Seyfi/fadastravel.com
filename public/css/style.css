@@ -3413,6 +3413,14 @@ video {
   forced-color-adjust: none;
 }
 
+.\[options\:IParseOptions\]{
+  options: IParseOptions;
+}
+
+.\[root\:Root\]{
+  root: Root;
+}
+
 .owl-nav {
   position: absolute;
   top: 50%;

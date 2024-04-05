@@ -24,6 +24,7 @@
         action="/Contact"
         method="POST"
         class="mt-8 flex flex-col gap-6 mb-2 md:w-[28rem] max-w-screen-lg"
+        id="Contact"
       >
         <input
           name="name"
@@ -47,8 +48,9 @@
         ></textarea>
 
         <button
-          type="submit"
-          class="mt-6 py-4 px-8 text-white bg-red-300 rounded-full"
+          data-sitekey="6LdFpbEpAAAAAFxq9bHimzPF1bA1XmUdkwmC7uVs"
+          data-callback="onSubmit"
+          class="g-recaptcha mt-6 py-4 px-8 text-white bg-red-300 rounded-full"
         >
           SUBMIT MESSAGE
         </button>

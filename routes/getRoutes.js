@@ -81,9 +81,6 @@ getRoutes.get("/privatetours/:turname", async (req, res) => {
   const Meals = data[0][2][3];
   const AddOnActivities = data[0][2][4];
   const Reviews = data[2];
-  console.log("===============================================");
-  
-  console.log(AddOnActivities);
 
   // Veri varsa, Tours sayfasına yönlendir ve veriyi gönder
   res.render("private_tours/Tours", {

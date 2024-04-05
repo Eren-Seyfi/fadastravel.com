@@ -7,23 +7,15 @@ import sendTours from "../script/mail/sendTours.js";
 import fetch from "node-fetch";
 const postRoutes = express.Router();
 
-postRoutes.post(
-  "/Subscribe-To-Our-Newsletter/:form/:recaptchaResponse",
-  (req, res) => {
-    sendSubscribeToOurNewsletter(req.body);
-    res.redirect(req.get("referer"));
-  }
-);
+postRoutes.post("/Subscribe-To-Our-Newsletter", (req, res) => {
+  sendSubscribeToOurNewsletter(req.body);
+  res.redirect(req.get("referer"));
+});
 
 postRoutes.post("/Partner-With-Us", (req, res) => {
   sendPartnershipForm(req.body);
   res.redirect(req.get("referer"));
 });
-
-// postRoutes.post("/Contact", (req, res) => {
-//   sendContact(req.body);
-//   res.redirect(req.get("referer"));
-// });
 
 postRoutes.post("/Contact/:recaptchaResponse", async (req, res) => {
   const recaptchaVerification = await fetch(

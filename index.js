@@ -2,6 +2,8 @@ import express from "express";
 import { engine } from "express-handlebars";
 import bodyParser from "body-parser";
 import multer from "multer";
+import dotenv from "dotenv";
+dotenv.config();
 
 import postRoutes from "./routes/postRoutes.js";
 import getRoutes from "./routes/getRoutes.js";

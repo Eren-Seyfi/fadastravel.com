@@ -17,9 +17,11 @@ postRoutes.post("/Partner-With-Us", (req, res) => {
   res.redirect(req.get("referer"));
 });
 
-postRoutes.post("/Contact/:recaptchaResponse", async (req, res) => {
+postRoutes.post("/Contact", async (req, res) => {
+  const recaptchaResponse = req.body["g-recaptcha-response"];
+
   const recaptchaVerification = await fetch(
-    `https://www.google.com/recaptcha/api/siteverify?secret=6LdmsbEpAAAAAJbffMyfNROoQLhq5sAdNRFCbxj9&response=${req.params.recaptchaResponse}`,
+    `https://www.google.com/recaptcha/api/siteverify?secret=6LdmsbEpAAAAAJbffMyfNROoQLhq5sAdNRFCbxj9&response=${recaptchaResponse}`,
     {
       method: "POST",
     }
@@ -27,6 +29,8 @@ postRoutes.post("/Contact/:recaptchaResponse", async (req, res) => {
 
   if (recaptchaVerification.success == true) {
     sendContact(req.body);
+  } else {
+    res.redirect(req.get("referer"));
   }
 });
 
@@ -36,7 +40,7 @@ postRoutes.post("/Minik-Ayaklar", (req, res) => {
   res.redirect(req.get("referer"));
 });
 
-postRoutes.post("/:turname", (req, res) => {
+postRoutes.post("privatetours/:turname", (req, res) => {
   sendTours(req.body, req.params.turname);
 
   res.redirect(req.get("referer"));

@@ -169,11 +169,21 @@
 
 <script>
 
-  document.getElementById("contactform").onsubmit = (e) => { let formData =
-  JSON.stringify(Object.fromEntries(new FormData(e.target))); let
-  recaptchaResponse = document.getElementById("g-recaptcha-response").value;
-  fetch("/Contact/" + recaptchaResponse, { method: "POST", body: formData,
-  headers: { "Content-Type": "application/json" } }) .then(() => {
-  location.reload(); }); };
+document.getElementById("contactform").onsubmit = (e) => {
+  e.preventDefault();
+  let formData = JSON.stringify(Object.fromEntries(new FormData(e.target)));
+  let recaptchaResponse = document.getElementById("g-recaptcha-response").value;
+
+  fetch("/Contact", {
+    method: "POST",
+    body: formData,
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .then(() => {
+    location.reload();
+  });
+};
 
 </script>

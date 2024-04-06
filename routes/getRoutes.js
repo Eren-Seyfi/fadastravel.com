@@ -43,6 +43,7 @@ getRoutes.get("/partnerwithus", (req, res) => {
   res.render("PartnerWithUs");
 });
 getRoutes.get("/contact", (req, res) => {
+
   res.render("Contact");
 });
 

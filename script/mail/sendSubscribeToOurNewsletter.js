@@ -2,8 +2,8 @@ import transporterMail from "./sendMail.js";
 
 export default async function sendSubscribeToOurNewsletter(data) {
   const mailOptions = {
-    from: process.env.MAIL_FROM,
-    to: process.env.MAIL_TO,
+    from: "fadastourism@gmail.com",
+    to: "info@fadastravel.com",
     subject: "Subscribe To Our Newsletter",
     html: `
       <p>First Name: ${data.name}</p>

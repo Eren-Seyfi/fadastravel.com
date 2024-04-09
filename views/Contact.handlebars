@@ -168,11 +168,17 @@
 </div>
 
 <script>
-
+  
 document.getElementById("contactform").onsubmit = (e) => {
   e.preventDefault();
   let formData = JSON.stringify(Object.fromEntries(new FormData(e.target)));
   let recaptchaResponse = document.getElementById("g-recaptcha-response").value;
+
+
+  if (!recaptchaResponse) {
+    alert("Please fill in the verification that I am not a robot.");
+    return;
+  }
 
   fetch("/Contact", {
     method: "POST",
@@ -185,5 +191,7 @@ document.getElementById("contactform").onsubmit = (e) => {
     location.reload();
   });
 };
+
+
 
 </script>

@@ -7,7 +7,7 @@ const Navbar = [
     link: "/activityguideform/customitinerary",
     isActive: false,
   },
-  { title: "Minik Ayaklar", link: "/minikayaklar", isActive: false },
+  // { title: "Minik Ayaklar", link: "/minikayaklar", isActive: false },
   { title: "Partner With Us", link: "/partnerwithus", isActive: false },
   { title: "Contact", link: "/contact", isActive: false },
 ];

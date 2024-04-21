@@ -119,7 +119,7 @@ const _4DaysCappadocia = [
     {
       Headers: "4 DAYS CAPPADOCIA",
       currency: "€",
-      Price: "599",
+      Price: "999",
       Map: "/img/tours/Map/4-DAYS-CAPPADOCIA.webp",
     },
   ],

@@ -186,7 +186,7 @@ const _7DaysCappadociaIstanbul = [
     {
       Headers: "7 DAYS CAPPADOCIA & ISTANBUL",
       currency: "€",
-      Price: "999",
+      Price: "1499",
       Map: "/img/tours/Map/7-DAYS-CAPPADOCIA-ISTANBUL.webp",
     },
   ],

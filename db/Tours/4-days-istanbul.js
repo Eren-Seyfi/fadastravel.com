@@ -113,7 +113,7 @@ const _4DaysIstanbul = [
     {
       Headers: "4 DAYS ISTANBUL",
       currency: "€",
-      Price: "499",
+      Price: "899",
       Map: "/img/tours/Map/4-DAYS-ISTANBUL.webp",
     },
   ],

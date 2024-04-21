@@ -264,7 +264,7 @@ const _11DaysTurkey = [
     {
       Headers: "11 DAYS TURKEY",
       currency: "€",
-      Price: "1.699",
+      Price: "2.099",
       Map: "/img/tours/Map/11-DAYS-ISTANBUL.webp",
     },
   ],

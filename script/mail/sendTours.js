@@ -16,7 +16,6 @@ export default async function sendTours(data, turname) {
           <p>Number Of Rooms: ${data.numberofrooms}</p>
           <p>Email: ${data.email}</p>
           <p>Data: ${data.date}</p>
-         
         `,
   };
   await transporterMail.sendMail(mailOptions);

@@ -5,13 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <link rel="stylesheet" href="/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@20.1.0/build/css/intlTelInput.css">
-    <link rel="stylesheet" href="/css/accordion.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@20.1.0/build/css/intlTelInput.css"
+    />
+    <link rel="stylesheet" href="/css/accordion.css" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js'); fbq('init',
+      '354924833706966'); fbq('track', 'PageView');
+    </script>
+    <noscript><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=354924833706966&ev=PageView&noscript=1"
+      /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
-
 
   <body class="w-auto h-full flex flex-col justify-between">
 
@@ -92,7 +114,7 @@
       {{! alt navbar }}
       <div class="flex justify-between items-center px-8 md:px-0">
 
-        <a href="/" class="h-12 md:h-14 ">
+        <a href="/" class="h-12 md:h-14">
           <img class="h-14" src="/img/layouts/navbarlogo.png" alt="Logo" />
         </a>
         <!-- Navbar içindeki menü -->
@@ -111,7 +133,7 @@
         </button>
 
       </div>
-      
+
       <ul class="md:hidden block mobil-menu w-auto hidden px-10 text-end"> <!-- Add 'hidden' class here -->
           {{#each menuItems}}
               <li class="{{#if isActive}}text-red-500{{/if}} hover:text-red-500 duration-500 text-gray-600 text-base font-bold tracking-widest font-poppins">
@@ -122,8 +144,7 @@
 
     </nav>
 
-{{{body}}}
-
+    {{{body}}}
 
     <footer class="bg-[#383838] py-10 md:px-0 px-4">
       <div
@@ -143,7 +164,7 @@
               <span>+90 538 216 2785</span>
             </a>
             <a
-              class="flex items-center justify-center md:justify-start space-x-4 text-white font-semibold  text-lg group md:hover:text-red-400"
+              class="flex items-center justify-center md:justify-start space-x-4 text-white font-semibold text-lg group md:hover:text-red-400"
               href="mailto:info@fadastravel.com"
               target="_blank"
             >
@@ -192,34 +213,42 @@
       </div>
     </footer>
 
-<script>
-  function onClick(e) {
-    e.preventDefault();
-    grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6Lc3mbEpAAAAAM88IJPxND1vfvnNUhaMawAv37-g', {action: 'LOGIN'});
-    });
-  }
-</script>
+    <script>
+      function onClick(e) { e.preventDefault();
+      grecaptcha.enterprise.ready(async () => { const token = await
+      grecaptcha.enterprise.execute('6Lc3mbEpAAAAAM88IJPxND1vfvnNUhaMawAv37-g',
+      {action: 'LOGIN'}); }); }
+    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script>
       AOS.init();
-    </script>  
-     <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+    </script>
+    <script
+      src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"
+    ></script>
     <script src="/js/owl.carousel.min.js"></script>
-    
-    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@20.1.0/build/js/intlTelInput.min.js"></script>
+
+    <script
+      src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/intl-tel-input@20.1.0/build/js/intlTelInput.min.js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="/js/main.js"></script>
     <script>
-      const input = document.querySelector("#phone");
-      window.intlTelInput(input, {
-        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@20.1.0/build/js/utils.js",
-        initialCountry: "us",
-        hiddenInput: () => ({ phone: "full_phone", country: "country_code" }),
-      });
+      const input = document.querySelector("#phone"); window.intlTelInput(input,
+      { utilsScript:
+      "https://cdn.jsdelivr.net/npm/intl-tel-input@20.1.0/build/js/utils.js",
+      initialCountry: "us", hiddenInput: () => ({ phone: "full_phone", country:
+      "country_code" }), });
     </script>
-    
-   </body>
+
+  </body>
 </html>

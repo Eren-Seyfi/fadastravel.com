@@ -3,7 +3,7 @@ import transporterMail from "./sendMail.js";
 export default async function sendTours(data, turname) {
   const mailOptions = {
     from: "fadastourism@gmail.com",
-    to: "eren50seyfi@gmail.com",
+    to: "info@fadastravel.com",
     subject: turname,
     html: `
           <p>Tur Name: ${data.turname}</p>

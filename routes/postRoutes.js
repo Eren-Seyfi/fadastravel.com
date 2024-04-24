@@ -40,7 +40,7 @@ postRoutes.post("/Minik-Ayaklar", (req, res) => {
   res.redirect(req.get("referer"));
 });
 
-postRoutes.post("privatetours/:turname", (req, res) => {
+postRoutes.post("/:turname", (req, res) => {
   sendTours(req.body, req.params.turname);
 
   res.redirect(req.get("referer"));

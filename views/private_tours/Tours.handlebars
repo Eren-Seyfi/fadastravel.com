@@ -224,9 +224,9 @@
             </h1>
 
             {{#each AddOnActivities}}
-              <h1>{{this.[0]}}</h1>
+               <h1>{{this.[0]}}</h1>
               <ul class="pl-8 list-disc">
-               {{#each this.[1] }}
+               {{#each this.[1]}}
                   <li class="font-light text-sm">{{this}}</li>
                 {{/each}}
               </ul>
@@ -251,7 +251,7 @@
       >
         <img class="rounded-3xl w-96" src="{{form.Map}}" alt="" />
         <form
-          action="privatetours/{{form.Headers}}"
+          action="/{{form.Headers}}"
           method="POST"
           class="flex flex-col justify-center items-center md:items-start h-full w-full gap-10 px-4 md:px-0"
         >
@@ -390,6 +390,7 @@
                 id="date-picker"
                 class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                 placeholder=" "
+                name="date"
                 required
               />
               <label

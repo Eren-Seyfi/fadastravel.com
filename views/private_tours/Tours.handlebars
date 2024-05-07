@@ -1,11 +1,12 @@
-<section class="space-y-20 w-full h-auto">
+<section class="md:space-y-20 w-full h-auto">
+
   <div class="owl-carousel tours owl-theme">
     {{#each carousel}}
       <div class="item">
         <img
           src="{{this}}"
           alt="{{this}}"
-          class="rounded-3xl border-none border-0 md:h-96 h-[32rem] w-full"
+          class="rounded-3xl border-none border-0 md:h-96 w-full"
         />
       </div>
     {{/each}}
@@ -226,7 +227,7 @@
             {{#each AddOnActivities}}
                <h1>{{this.[0]}}</h1>
               <ul class="pl-8 list-disc">
-               {{#each this.[1]}}
+                 {{#each this.[1]}}
                   <li class="font-light text-sm">{{this}}</li>
                 {{/each}}
               </ul>
@@ -245,7 +246,8 @@
       </div>
     </div>
     {{! Tur form }}
-    <div class="flex flex-col items-center w-full ml-0 md:ml-10">
+
+    <div class="flex flex-col items-center w-full ml-0 md:ml-10 md:mt-0 mt-10">
       <div
         class="flex flex-col justify-center items-center h-full w-full gap-10"
       >
@@ -272,7 +274,10 @@
             <h2 class="font-medium text-4xl font-poppins h-7">person</h2>
           </div>
           <div class="flex items-center gap-2">
-            <span>(5.0 Reviews)</span>
+            <a
+              href="https://www.tripadvisor.com/Attraction_Review-g297983-d25030539-Reviews-Fadas_Travel-Goreme_Cappadocia.html"
+              target="_blank"
+            >(5.0 Reviews)</a>
             <div class="flex items-center gap-0.5">
               <i class="fa-solid fa-star text-[#EFAD4E]"></i>
               <i class="fa-solid fa-star text-[#EFAD4E]"></i>

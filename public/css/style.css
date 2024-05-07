@@ -825,6 +825,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -1042,6 +1046,10 @@ video {
 
 .h-screen{
   height: 100vh;
+}
+
+.h-\[30rem\]{
+  height: 30rem;
 }
 
 .min-h-\[100px\]{
@@ -4028,6 +4036,10 @@ video {
     margin-left: 2.5rem;
   }
 
+  .md\:mt-0{
+    margin-top: 0px;
+  }
+
   .md\:block{
     display: block;
   }
@@ -4133,6 +4145,12 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-y-20 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(5rem * var(--tw-space-y-reverse));
   }
 
   .md\:rounded-\[3rem\]{

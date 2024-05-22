@@ -17,12 +17,12 @@
   >
     {{! Tur içerik }}
     <div
-      class="col-span-2 flex flex-col items-center justify-between container shadow-lg rounded-3xl w-full h-auto pt-10"
+      class="col-span-2 flex flex-col items-center justify-between container shadow-lg rounded-3xl w-full h-auto pt-8"
     >
       {{! Tur Name  }}
 
       <div class="space-y-4">
-        <h1 class="text-3xl p-4 font-bold">{{content.Headers}}</h1>
+        <h1 class="text-3xl px-4 font-bold">{{content.Headers}}</h1>
         <p class="p-4 text-justify font-normal">{{content.Content}}</p>
         {{! Itinerary  }}
         <div
@@ -114,6 +114,7 @@
 
                     </ul>
                   </div>
+
                   {{! Add On AddOnActivities  }}
                   <div class="w-full space-y-3">
                     <h1
@@ -218,7 +219,7 @@
           </div>
 
           {{! Add On Activities  }}
-          <div class="rounded-2xl bg-[#FAF4E4] px-4 pt-8 space-y-3">
+          <div class="rounded-2xl bg-[#FAF4E4] px-4 py-8 space-y-3">
             <h1 class="flex items-center gap-2">
               <FaPlus class="text-xl" />
               <span class="text-lg">Add On Activities</span>
@@ -252,6 +253,7 @@
         class="flex flex-col justify-center items-center h-full w-full gap-10"
       >
         <img class="rounded-3xl w-96" src="{{form.Map}}" alt="" />
+
         <form
           action="/{{form.Headers}}"
           method="POST"
@@ -277,6 +279,7 @@
             <a
               href="https://www.tripadvisor.com/Attraction_Review-g297983-d25030539-Reviews-Fadas_Travel-Goreme_Cappadocia.html"
               target="_blank"
+              class="underline "
             >(5.0 Reviews)</a>
             <div class="flex items-center gap-0.5">
               <i class="fa-solid fa-star text-[#EFAD4E]"></i>
@@ -404,14 +407,14 @@
                 Select a Date
               </label>
             </div>
-
-          </div>
           <button
-            class="w-full select-none rounded-full bg-[#F44336] py-4 px-6 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-red-500/20 transition-all hover:shadow-lg hover:shadow-red-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            class="w-full select-none rounded-full bg-[#F44336] py-4 px-6 text-center align-middle  text-lg font-bold uppercase text-white shadow-md shadow-red-500/20 transition-all hover:shadow-lg hover:shadow-red-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             type="submit"
           >
             REQUEST TOUR
           </button>
+          </div>
+        
         </form>
 
       </div>
@@ -420,9 +423,9 @@
   </div>
 
   <section
-    class="w-full min-h-screen md:min-h-[35rem] bg-[#04A9DE] flex flex-col justify-center items-center"
+    class="w-full min-h-screen md:min-h-[35rem] bg-[#04A9DE] flex flex-col justify-center items-center mt-6 md:mt-10"
   >
-    <p class="mb-4 text-3xl md:text-4xl lg:text-5xl text-white">Reviews</p>
+    <p class="mb-4 mt-2 text-3xl md:text-4xl lg:text-5xl text-white">Reviews</p>
     <div class="owl-carousel owl-theme container h-auto w-full reviews">
 
       {{#each Reviews}}

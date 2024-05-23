@@ -15,7 +15,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const getRoutes = express.Router();
-
+getRoutes.get("/img/MaksPasta.png", (req, res) => {
+  res.redirect(301, "https://makspasta.com/");
+  // res.render("MaksPasta");
+});
 getRoutes.get("/", (req, res) => {
   res.render("Home", { ToursCard, GlobalReviews });
 });
@@ -44,7 +47,6 @@ getRoutes.get("/partnerwithus", (req, res) => {
   res.render("PartnerWithUs");
 });
 getRoutes.get("/contact", (req, res) => {
-
   res.render("Contact");
 });
 

@@ -58,6 +58,20 @@ getRoutes.get("/activityguide/:id", (req, res) => {
   res.sendFile(pdfPath);
 });
 
+getRoutes.get("/cappadociatips", (req, res) => {
+  // İstekten gelen ":id" parametresini kullanarak PDF dosyasının yolunu oluşturun
+  const pdfPath = join(__dirname, "../public/pdf/Fadas Cappadocia Tips.pdf");
+  // PDF dosyasını istemciye gönder
+  res.sendFile(pdfPath);
+});
+
+getRoutes.get("/istanbultips", (req, res) => {
+  // İstekten gelen ":id" parametresini kullanarak PDF dosyasının yolunu oluşturun
+  const pdfPath = join(__dirname, "../public/pdf/Fadas Istanbul Tips.pdf");
+  // PDF dosyasını istemciye gönder
+  res.sendFile(pdfPath);
+});
+
 getRoutes.get("/privatetours/:turname", async (req, res) => {
   const turname = req.params.turname;
   let data;

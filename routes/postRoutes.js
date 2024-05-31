@@ -40,10 +40,39 @@ postRoutes.post("/Minik-Ayaklar", (req, res) => {
   res.redirect(req.get("referer"));
 });
 
-postRoutes.post("/:turname", (req, res) => {
-  sendTours(req.body, req.params.turname);
+postRoutes.post("/:turname", async (req, res) => {
+  const data = req.body;
+  const turname = req.params.turname;
 
-  res.redirect(req.get("referer"));
+  // Gerekli alanların varlığını kontrol et
+  const requiredFields = [
+   
+    "firstname",
+    "lastname",
+    "numberofadults",
+    "numberofinfant",
+    "numberofkids",
+    "full_phone",
+    "numberofrooms",
+    "email",
+    "date",
+  ];
+
+  for (const field of requiredFields) {
+    if (!data[field] || data[field].trim() === "") {
+      return res.status(400).send(`Eksik veya boş gerekli alan: ${field}`);
+    }
+  }
+
+  try {
+    await sendTours(data, turname);
+    res.redirect(req.get("referer"));
+  } catch (error) {
+    console.error("Email gönderim hatası:", error);
+    res
+      .status(500)
+      .send("Email gönderilirken bir hata oluştu. Lütfen tekrar deneyin.");
+  }
 });
 
 export default postRoutes;

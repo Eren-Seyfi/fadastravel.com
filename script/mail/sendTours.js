@@ -23,7 +23,7 @@ export default async function sendTours(data, turname) {
   // Eğer tüm gerekli alanlar doluysa, mail seçeneklerini oluşturun
   const mailOptions = {
     from: "fadastourism@gmail.com",
-    to: "eren50seyfi@gmail.com",
+    to: "info@fadastravel.com",
     subject: turname || "Tur Bilgisi",
     html: `
       <p>Tur Name: ${turname}</p>

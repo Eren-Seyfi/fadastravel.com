@@ -7,6 +7,7 @@ dotenv.config();
 
 import postRoutes from "./routes/postRoutes.js";
 import getRoutes from "./routes/getRoutes.js";
+import getPdfRoutes from "./routes/pdfRoutes.js";
 
 import Navbar from "./db/Navbar.js";
 
@@ -47,6 +48,7 @@ app.use((req, res, next) => {
 
 // app.use("/", router);
 app.use("/", getRoutes);
+app.use("/", getPdfRoutes);
 app.use("/", postRoutes);
 
 app.listen(PORT);

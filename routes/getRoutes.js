@@ -1,18 +1,16 @@
 import express from "express";
-import { fileURLToPath } from "url";
-import { dirname, join } from "path";
+
 import ToursCard from "../db/ToursCard.js";
 import GlobalReviews from "../db/GlobalReviews.js";
 import TeamCard from "../db/Team.js";
-import MinikAyaklar from "../db/MinikAyaklar.js";
+
 
 import _4DaysCappadocia from "../db/Tours/4-days-cappadocia.js";
 import _4DaysIstanbul from "../db/Tours/4-days-istanbul.js";
 import _7DaysCappadociaIstanbul from "../db/Tours/7-days-cappadocia-istanbul.js";
 import _11DaysTurkey from "../db/Tours/11-days-turkey.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+
 
 const getRoutes = express.Router();
 getRoutes.get("/img/MaksPasta.png", (req, res) => {
@@ -36,13 +34,7 @@ getRoutes.get("/activityguideform/customitinerary", (req, res) => {
   res.render("activity_guide_form/CustomItinerary");
 });
 
-// getRoutes.get("/minikayaklar", (req, res) => {
-//   res.render("MinikAyaklar", { MinikAyaklar });
-// });
 
-// getRoutes.get("/Minik-Ayaklar", (req, res) => {
-//   res.render("MinikAyaklar", { MinikAyaklar });
-// });
 getRoutes.get("/partnerwithus", (req, res) => {
   res.render("PartnerWithUs");
 });
@@ -50,27 +42,6 @@ getRoutes.get("/contact", (req, res) => {
   res.render("Contact");
 });
 
-getRoutes.get("/activityguide/:id", (req, res) => {
-  // İstekten gelen ":id" parametresini kullanarak PDF dosyasının yolunu oluşturun
-  const pdfPath = join(__dirname, "../public/pdf", req.params.id + ".pdf");
-
-  // PDF dosyasını istemciye gönder
-  res.sendFile(pdfPath);
-});
-
-getRoutes.get("/cappadociatips", (req, res) => {
-  // İstekten gelen ":id" parametresini kullanarak PDF dosyasının yolunu oluşturun
-  const pdfPath = join(__dirname, "../public/pdf/Fadas Cappadocia Tips.pdf");
-  // PDF dosyasını istemciye gönder
-  res.sendFile(pdfPath);
-});
-
-getRoutes.get("/istanbultips", (req, res) => {
-  // İstekten gelen ":id" parametresini kullanarak PDF dosyasının yolunu oluşturun
-  const pdfPath = join(__dirname, "../public/pdf/Fadas Istanbul Tips.pdf");
-  // PDF dosyasını istemciye gönder
-  res.sendFile(pdfPath);
-});
 
 getRoutes.get("/privatetours/:turname", async (req, res) => {
   const turname = req.params.turname;

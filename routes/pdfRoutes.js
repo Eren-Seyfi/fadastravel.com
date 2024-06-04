@@ -32,4 +32,14 @@ getPdfRoutes.get("/cappadociatips", (req, res) => {
   res.sendFile(pdfPath);
 });
 
+getPdfRoutes.get("/activityguide/Istanbul_Activity", (req, res) => {
+  const pdfPath = join(__dirname, "../public/pdf/Istanbul_Activity.pdf");
+  res.sendFile(pdfPath);
+});
+
+getPdfRoutes.get("/activityguide/Cappadocia_Activities", (req, res) => {
+  const pdfPath = join(__dirname, "../public/pdf/Cappadocia_Activities.pdf");
+  res.sendFile(pdfPath);
+});
+
 export default getPdfRoutes;

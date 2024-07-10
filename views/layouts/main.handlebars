@@ -37,9 +37,9 @@
 
   <body class="w-auto h-full flex flex-col justify-between">
 
-    <nav class="py-2 pt-0 md:pt-4 space-y-16 container w-full">
+    <nav class="py-2 pt-0  md:pt-4 space-y-2 container w-full">
       {{! üst navbar }}
-      <div class="hidden lg:flex items-center justify-between">
+      <div class="hidden  lg:flex items-center justify-between">
         {{! İletişim bilgileri  }}
         <div class="flex gap-5 items-center flex-wrap">
           <a
@@ -112,7 +112,7 @@
       </div>
 
       {{! alt navbar }}
-      <div class="flex justify-between items-center px-8 md:px-0">
+      <div class="flex  justify-between items-center  px-8 md:px-0">
 
         <a href="/" class="h-12 md:h-14">
           <img class="h-14" src="/img/layouts/navbarlogo.png" alt="Logo" />
@@ -134,9 +134,9 @@
 
       </div>
 
-      <ul class="md:hidden block mobil-menu w-auto hidden px-10 text-end"> <!-- Add 'hidden' class here -->
+      <ul class="md:hidden  block mobil-menu w-auto hidden px-10 text-end"> <!-- Add 'hidden' class here -->
           {{#each menuItems}}
-              <li class="{{#if isActive}}text-red-500{{/if}} hover:text-red-500 duration-500 text-gray-600 text-base font-bold tracking-widest font-poppins">
+              <li class="{{#if isActive}}text-red-500{{/if}} hover:text-red-500 duration-500 text-gray-600 text-xl font-bold tracking-widest font-poppins">
                 <a href="{{this.link}}">{{this.title}}</a>
               </li>
           {{/each}}

@@ -41,5 +41,9 @@ getPdfRoutes.get("/activityguide/Cappadocia_Activities", (req, res) => {
   const pdfPath = join(__dirname, "../public/pdf/Cappadocia_Activities.pdf");
   res.sendFile(pdfPath);
 });
-
+// Full Istanbul Guide 2.pdf
+getPdfRoutes.get("/istanbulguide2", (req, res) => {
+  const pdfPath = join(__dirname, "../public/pdf/Full Istanbul Guide 2.pdf");
+  res.sendFile(pdfPath);
+});
 export default getPdfRoutes;

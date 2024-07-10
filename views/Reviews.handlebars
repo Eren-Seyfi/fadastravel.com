@@ -1,0 +1,20 @@
+<section>
+  <div class="flex items-center justify-center gap-2 flex-wrap px-2 py-2">
+
+    {{#each Youtube}}
+
+      <iframe
+        width="360"
+        height="615"
+        src="https://youtube.com/embed/{{this}}"
+        class="rounded-2xl"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+
+    {{/each}}
+  </div>
+</section>

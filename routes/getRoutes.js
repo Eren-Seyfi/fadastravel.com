@@ -3,14 +3,12 @@ import express from "express";
 import ToursCard from "../db/ToursCard.js";
 import GlobalReviews from "../db/GlobalReviews.js";
 import TeamCard from "../db/Team.js";
-
+import Youtube from "../db/Youtube.js";
 
 import _4DaysCappadocia from "../db/Tours/4-days-cappadocia.js";
 import _4DaysIstanbul from "../db/Tours/4-days-istanbul.js";
 import _7DaysCappadociaIstanbul from "../db/Tours/7-days-cappadocia-istanbul.js";
 import _11DaysTurkey from "../db/Tours/11-days-turkey.js";
-
-
 
 const getRoutes = express.Router();
 getRoutes.get("/img/MaksPasta.png", (req, res) => {
@@ -21,6 +19,9 @@ getRoutes.get("/", (req, res) => {
   res.render("Home", { ToursCard, GlobalReviews });
 });
 
+getRoutes.get("/reviews", (req, res) => {
+  res.render("Reviews", { Youtube });
+});
 getRoutes.get("/whoweare", (req, res) => {
   res.render("WhoWeAre", { TeamCard, GlobalReviews });
 });
@@ -30,18 +31,21 @@ getRoutes.get("/privatetours", (req, res) => {
   res.render("PrivateTours", { ToursCard, GlobalReviews });
 });
 
+// ================================ custom tours ================================
 getRoutes.get("/activityguideform/customitinerary", (req, res) => {
   res.render("activity_guide_form/CustomItinerary");
 });
 
-
+getRoutes.get("/custompackage", (req, res) => {
+  res.render("activity_guide_form/CustomItinerary");
+});
+// ==========================================================
 getRoutes.get("/partnerwithus", (req, res) => {
   res.render("PartnerWithUs");
 });
 getRoutes.get("/contact", (req, res) => {
   res.render("Contact");
 });
-
 
 getRoutes.get("/privatetours/:turname", async (req, res) => {
   const turname = req.params.turname;
